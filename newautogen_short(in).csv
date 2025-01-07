@@ -1,0 +1,2220 @@
+Question,Answer,text
+create 876:1 mux with output vikram and input ekam[9:$],"      module mux_876to1(
+        input [8759:0] ekam,
+        input [9:0] select,
+        output reg vikram
+      );
+      always @(*)
+        case(select)
+          10'd0: vikram = ekam[9:0];
+          10'd1: vikram = ekam[19:10];
+          10'd2: vikram = ekam[29:20];
+          10'd3: vikram = ekam[39:30];
+          10'd4: vikram = ekam[49:40];
+          10'd5: vikram = ekam[59:50];
+          10'd6: vikram = ekam[69:60];
+          10'd7: vikram = ekam[79:70];
+          10'd8: vikram = ekam[89:80];
+          10'd9: vikram = ekam[99:90];
+          10'd10: vikram = ekam[109:100];
+          10'd11: vikram = ekam[119:110];
+          10'd12: vikram = ekam[129:120];
+          10'd13: vikram = ekam[139:130];
+          10'd14: vikram = ekam[149:140];
+          10'd15: vikram = ekam[159:150];
+          10'd16: vikram = ekam[169:160];
+          10'd17: vikram = ekam[179:170];
+          10'd18: vikram = ekam[189:180];
+          10'd19: vikram = ekam[199:190];
+          10'd20: vikram = ekam[209:200];
+          10'd21: vikram = ekam[219:210];
+          10'd22: vikram = ekam[229:220];
+          10'd23: vikram = ekam[239:230];
+          10'd24: vikram = ekam[249:240];
+          10'd25: vikram = ekam[259:250];
+          10'd26: vikram = ekam[269:260];
+          10'd27: vikram = ekam[279:270];
+          10'd28: vikram = ekam[289:280];
+          10'd29: vikram = ekam[299:290];
+          10'd30: vikram = ekam[309:300];
+          10'd31: vikram = ekam[319:310];
+          10'd32: vikram = ekam[329:320];
+          10'd33: vikram = ekam[339:330];
+          10'd34: vikram = ekam[349:340];
+          10'd35: vikram = ekam[359:350];
+          10'd36: vikram = ekam[369:360];
+          10'd37: vikram = ekam[379:370];
+          10'd38: vikram = ekam[389:380];
+          10'd39: vikram = ekam[399:390];
+          10'd40: vikram = ekam[409:400];
+          10'd41: vikram = ekam[419:410];
+          10'd42: vikram = ekam[429:420];
+          10'd43: vikram = ekam[439:430];
+          10'd44: vikram = ekam[449:440];
+          10'd45: vikram = ekam[459:450];
+          10'd46: vikram = ekam[469:460];
+          10'd47: vikram = ekam[479:470];
+          10'd48: vikram = ekam[489:480];
+          10'd49: vikram = ekam[499:490];
+          10'd50: vikram = ekam[509:500];
+          10'd51: vikram = ekam[519:510];
+          10'd52: vikram = ekam[529:520];
+          10'd53: vikram = ekam[539:530];
+          10'd54: vikram = ekam[549:540];
+          10'd55: vikram = ekam[559:550];
+          10'd56: vikram = ekam[569:560];
+          10'd57: vikram = ekam[579:570];
+          10'd58: vikram = ekam[589:580];
+          10'd59: vikram = ekam[599:590];
+          10'd60: vikram = ekam[609:600];
+          10'd61: vikram = ekam[619:610];
+          10'd62: vikram = ekam[629:620];
+          10'd63: vikram = ekam[639:630];
+          10'd64: vikram = ekam[649:640];
+          10'd65: vikram = ekam[659:650];
+          10'd66: vikram = ekam[669:660];
+          10'd67: vikram = ekam[679:670];
+          10'd68: vikram = ekam[689:680];
+          10'd69: vikram = ekam[699:690];
+          10'd70: vikram = ekam[709:700];
+          10'd71: vikram = ekam[719:710];
+          10'd72: vikram = ekam[729:720];
+          10'd73: vikram = ekam[739:730];
+          10'd74: vikram = ekam[749:740];
+          10'd75: vikram = ekam[759:750];
+          10'd76: vikram = ekam[769:760];
+          10'd77: vikram = ekam[779:770];
+          10'd78: vikram = ekam[789:780];
+          10'd79: vikram = ekam[799:790];
+          10'd80: vikram = ekam[809:800];
+          10'd81: vikram = ekam[819:810];
+          10'd82: vikram = ekam[829:820];
+          10'd83: vikram = ekam[839:830];
+          10'd84: vikram = ekam[849:840];
+          10'd85: vikram = ekam[859:850];
+          10'd86: vikram = ekam[869:860];
+          10'd87: vikram = ekam[879:870];
+          10'd88: vikram = ekam[889:880];
+          10'd89: vikram = ekam[899:890];
+          10'd90: vikram = ekam[909:900];
+          10'd91: vikram = ekam[919:910];
+          10'd92: vikram = ekam[929:920];
+          10'd93: vikram = ekam[939:930];
+          10'd94: vikram = ekam[949:940];
+          10'd95: vikram = ekam[959:950];
+          10'd96: vikram = ekam[969:960];
+          10'd97: vikram = ekam[979:970];
+          10'd98: vikram = ekam[989:980];
+          10'd99: vikram = ekam[999:990];
+          10'd100: vikram = ekam[1009:1000];
+          10'd101: vikram = ekam[1019:1010];
+          10'd102: vikram = ekam[1029:1020];
+          10'd103: vikram = ekam[1039:1030];
+          10'd104: vikram = ekam[1049:1040];
+          10'd105: vikram = ekam[1059:1050];
+          10'd106: vikram = ekam[1069:1060];
+          10'd107: vikram = ekam[1079:1070];
+          10'd108: vikram = ekam[1089:1080];
+          10'd109: vikram = ekam[1099:1090];
+          10'd110: vikram = ekam[1109:1100];
+          10'd111: vikram = ekam[1119:1110];
+          10'd112: vikram = ekam[1129:1120];
+          10'd113: vikram = ekam[1139:1130];
+          10'd114: vikram = ekam[1149:1140];
+          10'd115: vikram = ekam[1159:1150];
+          10'd116: vikram = ekam[1169:1160];
+          10'd117: vikram = ekam[1179:1170];
+          10'd118: vikram = ekam[1189:1180];
+          10'd119: vikram = ekam[1199:1190];
+          10'd120: vikram = ekam[1209:1200];
+          10'd121: vikram = ekam[1219:1210];
+          10'd122: vikram = ekam[1229:1220];
+          10'd123: vikram = ekam[1239:1230];
+          10'd124: vikram = ekam[1249:1240];
+          10'd125: vikram = ekam[1259:1250];
+          10'd126: vikram = ekam[1269:1260];
+          10'd127: vikram = ekam[1279:1270];
+          10'd128: vikram = ekam[1289:1280];
+          10'd129: vikram = ekam[1299:1290];
+          10'd130: vikram = ekam[1309:1300];
+          10'd131: vikram = ekam[1319:1310];
+          10'd132: vikram = ekam[1329:1320];
+          10'd133: vikram = ekam[1339:1330];
+          10'd134: vikram = ekam[1349:1340];
+          10'd135: vikram = ekam[1359:1350];
+          10'd136: vikram = ekam[1369:1360];
+          10'd137: vikram = ekam[1379:1370];
+          10'd138: vikram = ekam[1389:1380];
+          10'd139: vikram = ekam[1399:1390];
+          10'd140: vikram = ekam[1409:1400];
+          10'd141: vikram = ekam[1419:1410];
+          10'd142: vikram = ekam[1429:1420];
+          10'd143: vikram = ekam[1439:1430];
+          10'd144: vikram = ekam[1449:1440];
+          10'd145: vikram = ekam[1459:1450];
+          10'd146: vikram = ekam[1469:1460];
+          10'd147: vikram = ekam[1479:1470];
+          10'd148: vikram = ekam[1489:1480];
+          10'd149: vikram = ekam[1499:1490];
+          10'd150: vikram = ekam[1509:1500];
+          10'd151: vikram = ekam[1519:1510];
+          10'd152: vikram = ekam[1529:1520];
+          10'd153: vikram = ekam[1539:1530];
+          10'd154: vikram = ekam[1549:1540];
+          10'd155: vikram = ekam[1559:1550];
+          10'd156: vikram = ekam[1569:1560];
+          10'd157: vikram = ekam[1579:1570];
+          10'd158: vikram = ekam[1589:1580];
+          10'd159: vikram = ekam[1599:1590];
+          10'd160: vikram = ekam[1609:1600];
+          10'd161: vikram = ekam[1619:1610];
+          10'd162: vikram = ekam[1629:1620];
+          10'd163: vikram = ekam[1639:1630];
+          10'd164: vikram = ekam[1649:1640];
+          10'd165: vikram = ekam[1659:1650];
+          10'd166: vikram = ekam[1669:1660];
+          10'd167: vikram = ekam[1679:1670];
+          10'd168: vikram = ekam[1689:1680];
+          10'd169: vikram = ekam[1699:1690];
+          10'd170: vikram = ekam[1709:1700];
+          10'd171: vikram = ekam[1719:1710];
+          10'd172: vikram = ekam[1729:1720];
+          10'd173: vikram = ekam[1739:1730];
+          10'd174: vikram = ekam[1749:1740];
+          10'd175: vikram = ekam[1759:1750];
+          10'd176: vikram = ekam[1769:1760];
+          10'd177: vikram = ekam[1779:1770];
+          10'd178: vikram = ekam[1789:1780];
+          10'd179: vikram = ekam[1799:1790];
+          10'd180: vikram = ekam[1809:1800];
+          10'd181: vikram = ekam[1819:1810];
+          10'd182: vikram = ekam[1829:1820];
+          10'd183: vikram = ekam[1839:1830];
+          10'd184: vikram = ekam[1849:1840];
+          10'd185: vikram = ekam[1859:1850];
+          10'd186: vikram = ekam[1869:1860];
+          10'd187: vikram = ekam[1879:1870];
+          10'd188: vikram = ekam[1889:1880];
+          10'd189: vikram = ekam[1899:1890];
+          10'd190: vikram = ekam[1909:1900];
+          10'd191: vikram = ekam[1919:1910];
+          10'd192: vikram = ekam[1929:1920];
+          10'd193: vikram = ekam[1939:1930];
+          10'd194: vikram = ekam[1949:1940];
+          10'd195: vikram = ekam[1959:1950];
+          10'd196: vikram = ekam[1969:1960];
+          10'd197: vikram = ekam[1979:1970];
+          10'd198: vikram = ekam[1989:1980];
+          10'd199: vikram = ekam[1999:1990];
+          10'd200: vikram = ekam[2009:2000];
+          10'd201: vikram = ekam[2019:2010];
+          10'd202: vikram = ekam[2029:2020];
+          10'd203: vikram = ekam[2039:2030];
+          10'd204: vikram = ekam[2049:2040];
+          10'd205: vikram = ekam[2059:2050];
+          10'd206: vikram = ekam[2069:2060];
+          10'd207: vikram = ekam[2079:2070];
+          10'd208: vikram = ekam[2089:2080];
+          10'd209: vikram = ekam[2099:2090];
+          10'd210: vikram = ekam[2109:2100];
+          10'd211: vikram = ekam[2119:2110];
+          10'd212: vikram = ekam[2129:2120];
+          10'd213: vikram = ekam[2139:2130];
+          10'd214: vikram = ekam[2149:2140];
+          10'd215: vikram = ekam[2159:2150];
+          10'd216: vikram = ekam[2169:2160];
+          10'd217: vikram = ekam[2179:2170];
+          10'd218: vikram = ekam[2189:2180];
+          10'd219: vikram = ekam[2199:2190];
+          10'd220: vikram = ekam[2209:2200];
+          10'd221: vikram = ekam[2219:2210];
+          10'd222: vikram = ekam[2229:2220];
+          10'd223: vikram = ekam[2239:2230];
+          10'd224: vikram = ekam[2249:2240];
+          10'd225: vikram = ekam[2259:2250];
+          10'd226: vikram = ekam[2269:2260];
+          10'd227: vikram = ekam[2279:2270];
+          10'd228: vikram = ekam[2289:2280];
+          10'd229: vikram = ekam[2299:2290];
+          10'd230: vikram = ekam[2309:2300];
+          10'd231: vikram = ekam[2319:2310];
+          10'd232: vikram = ekam[2329:2320];
+          10'd233: vikram = ekam[2339:2330];
+          10'd234: vikram = ekam[2349:2340];
+          10'd235: vikram = ekam[2359:2350];
+          10'd236: vikram = ekam[2369:2360];
+          10'd237: vikram = ekam[2379:2370];
+          10'd238: vikram = ekam[2389:2380];
+          10'd239: vikram = ekam[2399:2390];
+          10'd240: vikram = ekam[2409:2400];
+          10'd241: vikram = ekam[2419:2410];
+          10'd242: vikram = ekam[2429:2420];
+          10'd243: vikram = ekam[2439:2430];
+          10'd244: vikram = ekam[2449:2440];
+          10'd245: vikram = ekam[2459:2450];
+          10'd246: vikram = ekam[2469:2460];
+          10'd247: vikram = ekam[2479:2470];
+          10'd248: vikram = ekam[2489:2480];
+          10'd249: vikram = ekam[2499:2490];
+          10'd250: vikram = ekam[2509:2500];
+          10'd251: vikram = ekam[2519:2510];
+          10'd252: vikram = ekam[2529:2520];
+          10'd253: vikram = ekam[2539:2530];
+          10'd254: vikram = ekam[2549:2540];
+          10'd255: vikram = ekam[2559:2550];
+          10'd256: vikram = ekam[2569:2560];
+          10'd257: vikram = ekam[2579:2570];
+          10'd258: vikram = ekam[2589:2580];
+          10'd259: vikram = ekam[2599:2590];
+          10'd260: vikram = ekam[2609:2600];
+          10'd261: vikram = ekam[2619:2610];
+          10'd262: vikram = ekam[2629:2620];
+          10'd263: vikram = ekam[2639:2630];
+          10'd264: vikram = ekam[2649:2640];
+          10'd265: vikram = ekam[2659:2650];
+          10'd266: vikram = ekam[2669:2660];
+          10'd267: vikram = ekam[2679:2670];
+          10'd268: vikram = ekam[2689:2680];
+          10'd269: vikram = ekam[2699:2690];
+          10'd270: vikram = ekam[2709:2700];
+          10'd271: vikram = ekam[2719:2710];
+          10'd272: vikram = ekam[2729:2720];
+          10'd273: vikram = ekam[2739:2730];
+          10'd274: vikram = ekam[2749:2740];
+          10'd275: vikram = ekam[2759:2750];
+          10'd276: vikram = ekam[2769:2760];
+          10'd277: vikram = ekam[2779:2770];
+          10'd278: vikram = ekam[2789:2780];
+          10'd279: vikram = ekam[2799:2790];
+          10'd280: vikram = ekam[2809:2800];
+          10'd281: vikram = ekam[2819:2810];
+          10'd282: vikram = ekam[2829:2820];
+          10'd283: vikram = ekam[2839:2830];
+          10'd284: vikram = ekam[2849:2840];
+          10'd285: vikram = ekam[2859:2850];
+          10'd286: vikram = ekam[2869:2860];
+          10'd287: vikram = ekam[2879:2870];
+          10'd288: vikram = ekam[2889:2880];
+          10'd289: vikram = ekam[2899:2890];
+          10'd290: vikram = ekam[2909:2900];
+          10'd291: vikram = ekam[2919:2910];
+          10'd292: vikram = ekam[2929:2920];
+          10'd293: vikram = ekam[2939:2930];
+          10'd294: vikram = ekam[2949:2940];
+          10'd295: vikram = ekam[2959:2950];
+          10'd296: vikram = ekam[2969:2960];
+          10'd297: vikram = ekam[2979:2970];
+          10'd298: vikram = ekam[2989:2980];
+          10'd299: vikram = ekam[2999:2990];
+          10'd300: vikram = ekam[3009:3000];
+          10'd301: vikram = ekam[3019:3010];
+          10'd302: vikram = ekam[3029:3020];
+          10'd303: vikram = ekam[3039:3030];
+          10'd304: vikram = ekam[3049:3040];
+          10'd305: vikram = ekam[3059:3050];
+          10'd306: vikram = ekam[3069:3060];
+          10'd307: vikram = ekam[3079:3070];
+          10'd308: vikram = ekam[3089:3080];
+          10'd309: vikram = ekam[3099:3090];
+          10'd310: vikram = ekam[3109:3100];
+          10'd311: vikram = ekam[3119:3110];
+          10'd312: vikram = ekam[3129:3120];
+          10'd313: vikram = ekam[3139:3130];
+          10'd314: vikram = ekam[3149:3140];
+          10'd315: vikram = ekam[3159:3150];
+          10'd316: vikram = ekam[3169:3160];
+          10'd317: vikram = ekam[3179:3170];
+          10'd318: vikram = ekam[3189:3180];
+          10'd319: vikram = ekam[3199:3190];
+          10'd320: vikram = ekam[3209:3200];
+          10'd321: vikram = ekam[3219:3210];
+          10'd322: vikram = ekam[3229:3220];
+          10'd323: vikram = ekam[3239:3230];
+          10'd324: vikram = ekam[3249:3240];
+          10'd325: vikram = ekam[3259:3250];
+          10'd326: vikram = ekam[3269:3260];
+          10'd327: vikram = ekam[3279:3270];
+          10'd328: vikram = ekam[3289:3280];
+          10'd329: vikram = ekam[3299:3290];
+          10'd330: vikram = ekam[3309:3300];
+          10'd331: vikram = ekam[3319:3310];
+          10'd332: vikram = ekam[3329:3320];
+          10'd333: vikram = ekam[3339:3330];
+          10'd334: vikram = ekam[3349:3340];
+          10'd335: vikram = ekam[3359:3350];
+          10'd336: vikram = ekam[3369:3360];
+          10'd337: vikram = ekam[3379:3370];
+          10'd338: vikram = ekam[3389:3380];
+          10'd339: vikram = ekam[3399:3390];
+          10'd340: vikram = ekam[3409:3400];
+          10'd341: vikram = ekam[3419:3410];
+          10'd342: vikram = ekam[3429:3420];
+          10'd343: vikram = ekam[3439:3430];
+          10'd344: vikram = ekam[3449:3440];
+          10'd345: vikram = ekam[3459:3450];
+          10'd346: vikram = ekam[3469:3460];
+          10'd347: vikram = ekam[3479:3470];
+          10'd348: vikram = ekam[3489:3480];
+          10'd349: vikram = ekam[3499:3490];
+          10'd350: vikram = ekam[3509:3500];
+          10'd351: vikram = ekam[3519:3510];
+          10'd352: vikram = ekam[3529:3520];
+          10'd353: vikram = ekam[3539:3530];
+          10'd354: vikram = ekam[3549:3540];
+          10'd355: vikram = ekam[3559:3550];
+          10'd356: vikram = ekam[3569:3560];
+          10'd357: vikram = ekam[3579:3570];
+          10'd358: vikram = ekam[3589:3580];
+          10'd359: vikram = ekam[3599:3590];
+          10'd360: vikram = ekam[3609:3600];
+          10'd361: vikram = ekam[3619:3610];
+          10'd362: vikram = ekam[3629:3620];
+          10'd363: vikram = ekam[3639:3630];
+          10'd364: vikram = ekam[3649:3640];
+          10'd365: vikram = ekam[3659:3650];
+          10'd366: vikram = ekam[3669:3660];
+          10'd367: vikram = ekam[3679:3670];
+          10'd368: vikram = ekam[3689:3680];
+          10'd369: vikram = ekam[3699:3690];
+          10'd370: vikram = ekam[3709:3700];
+          10'd371: vikram = ekam[3719:3710];
+          10'd372: vikram = ekam[3729:3720];
+          10'd373: vikram = ekam[3739:3730];
+          10'd374: vikram = ekam[3749:3740];
+          10'd375: vikram = ekam[3759:3750];
+          10'd376: vikram = ekam[3769:3760];
+          10'd377: vikram = ekam[3779:3770];
+          10'd378: vikram = ekam[3789:3780];
+          10'd379: vikram = ekam[3799:3790];
+          10'd380: vikram = ekam[3809:3800];
+          10'd381: vikram = ekam[3819:3810];
+          10'd382: vikram = ekam[3829:3820];
+          10'd383: vikram = ekam[3839:3830];
+          10'd384: vikram = ekam[3849:3840];
+          10'd385: vikram = ekam[3859:3850];
+          10'd386: vikram = ekam[3869:3860];
+          10'd387: vikram = ekam[3879:3870];
+          10'd388: vikram = ekam[3889:3880];
+          10'd389: vikram = ekam[3899:3890];
+          10'd390: vikram = ekam[3909:3900];
+          10'd391: vikram = ekam[3919:3910];
+          10'd392: vikram = ekam[3929:3920];
+          10'd393: vikram = ekam[3939:3930];
+          10'd394: vikram = ekam[3949:3940];
+          10'd395: vikram = ekam[3959:3950];
+          10'd396: vikram = ekam[3969:3960];
+          10'd397: vikram = ekam[3979:3970];
+          10'd398: vikram = ekam[3989:3980];
+          10'd399: vikram = ekam[3999:3990];
+          10'd400: vikram = ekam[4009:4000];
+          10'd401: vikram = ekam[4019:4010];
+          10'd402: vikram = ekam[4029:4020];
+          10'd403: vikram = ekam[4039:4030];
+          10'd404: vikram = ekam[4049:4040];
+          10'd405: vikram = ekam[4059:4050];
+          10'd406: vikram = ekam[4069:4060];
+          10'd407: vikram = ekam[4079:4070];
+          10'd408: vikram = ekam[4089:4080];
+          10'd409: vikram = ekam[4099:4090];
+          10'd410: vikram = ekam[4109:4100];
+          10'd411: vikram = ekam[4119:4110];
+          10'd412: vikram = ekam[4129:4120];
+          10'd413: vikram = ekam[4139:4130];
+          10'd414: vikram = ekam[4149:4140];
+          10'd415: vikram = ekam[4159:4150];
+          10'd416: vikram = ekam[4169:4160];
+          10'd417: vikram = ekam[4179:4170];
+          10'd418: vikram = ekam[4189:4180];
+          10'd419: vikram = ekam[4199:4190];
+          10'd420: vikram = ekam[4209:4200];
+          10'd421: vikram = ekam[4219:4210];
+          10'd422: vikram = ekam[4229:4220];
+          10'd423: vikram = ekam[4239:4230];
+          10'd424: vikram = ekam[4249:4240];
+          10'd425: vikram = ekam[4259:4250];
+          10'd426: vikram = ekam[4269:4260];
+          10'd427: vikram = ekam[4279:4270];
+          10'd428: vikram = ekam[4289:4280];
+          10'd429: vikram = ekam[4299:4290];
+          10'd430: vikram = ekam[4309:4300];
+          10'd431: vikram = ekam[4319:4310];
+          10'd432: vikram = ekam[4329:4320];
+          10'd433: vikram = ekam[4339:4330];
+          10'd434: vikram = ekam[4349:4340];
+          10'd435: vikram = ekam[4359:4350];
+          10'd436: vikram = ekam[4369:4360];
+          10'd437: vikram = ekam[4379:4370];
+          10'd438: vikram = ekam[4389:4380];
+          10'd439: vikram = ekam[4399:4390];
+          10'd440: vikram = ekam[4409:4400];
+          10'd441: vikram = ekam[4419:4410];
+          10'd442: vikram = ekam[4429:4420];
+          10'd443: vikram = ekam[4439:4430];
+          10'd444: vikram = ekam[4449:4440];
+          10'd445: vikram = ekam[4459:4450];
+          10'd446: vikram = ekam[4469:4460];
+          10'd447: vikram = ekam[4479:4470];
+          10'd448: vikram = ekam[4489:4480];
+          10'd449: vikram = ekam[4499:4490];
+          10'd450: vikram = ekam[4509:4500];
+          10'd451: vikram = ekam[4519:4510];
+          10'd452: vikram = ekam[4529:4520];
+          10'd453: vikram = ekam[4539:4530];
+          10'd454: vikram = ekam[4549:4540];
+          10'd455: vikram = ekam[4559:4550];
+          10'd456: vikram = ekam[4569:4560];
+          10'd457: vikram = ekam[4579:4570];
+          10'd458: vikram = ekam[4589:4580];
+          10'd459: vikram = ekam[4599:4590];
+          10'd460: vikram = ekam[4609:4600];
+          10'd461: vikram = ekam[4619:4610];
+          10'd462: vikram = ekam[4629:4620];
+          10'd463: vikram = ekam[4639:4630];
+          10'd464: vikram = ekam[4649:4640];
+          10'd465: vikram = ekam[4659:4650];
+          10'd466: vikram = ekam[4669:4660];
+          10'd467: vikram = ekam[4679:4670];
+          10'd468: vikram = ekam[4689:4680];
+          10'd469: vikram = ekam[4699:4690];
+          10'd470: vikram = ekam[4709:4700];
+          10'd471: vikram = ekam[4719:4710];
+          10'd472: vikram = ekam[4729:4720];
+          10'd473: vikram = ekam[4739:4730];
+          10'd474: vikram = ekam[4749:4740];
+          10'd475: vikram = ekam[4759:4750];
+          10'd476: vikram = ekam[4769:4760];
+          10'd477: vikram = ekam[4779:4770];
+          10'd478: vikram = ekam[4789:4780];
+          10'd479: vikram = ekam[4799:4790];
+          10'd480: vikram = ekam[4809:4800];
+          10'd481: vikram = ekam[4819:4810];
+          10'd482: vikram = ekam[4829:4820];
+          10'd483: vikram = ekam[4839:4830];
+          10'd484: vikram = ekam[4849:4840];
+          10'd485: vikram = ekam[4859:4850];
+          10'd486: vikram = ekam[4869:4860];
+          10'd487: vikram = ekam[4879:4870];
+          10'd488: vikram = ekam[4889:4880];
+          10'd489: vikram = ekam[4899:4890];
+          10'd490: vikram = ekam[4909:4900];
+          10'd491: vikram = ekam[4919:4910];
+          10'd492: vikram = ekam[4929:4920];
+          10'd493: vikram = ekam[4939:4930];
+          10'd494: vikram = ekam[4949:4940];
+          10'd495: vikram = ekam[4959:4950];
+          10'd496: vikram = ekam[4969:4960];
+          10'd497: vikram = ekam[4979:4970];
+          10'd498: vikram = ekam[4989:4980];
+          10'd499: vikram = ekam[4999:4990];
+          10'd500: vikram = ekam[5009:5000];
+          10'd501: vikram = ekam[5019:5010];
+          10'd502: vikram = ekam[5029:5020];
+          10'd503: vikram = ekam[5039:5030];
+          10'd504: vikram = ekam[5049:5040];
+          10'd505: vikram = ekam[5059:5050];
+          10'd506: vikram = ekam[5069:5060];
+          10'd507: vikram = ekam[5079:5070];
+          10'd508: vikram = ekam[5089:5080];
+          10'd509: vikram = ekam[5099:5090];
+          10'd510: vikram = ekam[5109:5100];
+          10'd511: vikram = ekam[5119:5110];
+          10'd512: vikram = ekam[5129:5120];
+          10'd513: vikram = ekam[5139:5130];
+          10'd514: vikram = ekam[5149:5140];
+          10'd515: vikram = ekam[5159:5150];
+          10'd516: vikram = ekam[5169:5160];
+          10'd517: vikram = ekam[5179:5170];
+          10'd518: vikram = ekam[5189:5180];
+          10'd519: vikram = ekam[5199:5190];
+          10'd520: vikram = ekam[5209:5200];
+          10'd521: vikram = ekam[5219:5210];
+          10'd522: vikram = ekam[5229:5220];
+          10'd523: vikram = ekam[5239:5230];
+          10'd524: vikram = ekam[5249:5240];
+          10'd525: vikram = ekam[5259:5250];
+          10'd526: vikram = ekam[5269:5260];
+          10'd527: vikram = ekam[5279:5270];
+          10'd528: vikram = ekam[5289:5280];
+          10'd529: vikram = ekam[5299:5290];
+          10'd530: vikram = ekam[5309:5300];
+          10'd531: vikram = ekam[5319:5310];
+          10'd532: vikram = ekam[5329:5320];
+          10'd533: vikram = ekam[5339:5330];
+          10'd534: vikram = ekam[5349:5340];
+          10'd535: vikram = ekam[5359:5350];
+          10'd536: vikram = ekam[5369:5360];
+          10'd537: vikram = ekam[5379:5370];
+          10'd538: vikram = ekam[5389:5380];
+          10'd539: vikram = ekam[5399:5390];
+          10'd540: vikram = ekam[5409:5400];
+          10'd541: vikram = ekam[5419:5410];
+          10'd542: vikram = ekam[5429:5420];
+          10'd543: vikram = ekam[5439:5430];
+          10'd544: vikram = ekam[5449:5440];
+          10'd545: vikram = ekam[5459:5450];
+          10'd546: vikram = ekam[5469:5460];
+          10'd547: vikram = ekam[5479:5470];
+          10'd548: vikram = ekam[5489:5480];
+          10'd549: vikram = ekam[5499:5490];
+          10'd550: vikram = ekam[5509:5500];
+          10'd551: vikram = ekam[5519:5510];
+          10'd552: vikram = ekam[5529:5520];
+          10'd553: vikram = ekam[5539:5530];
+          10'd554: vikram = ekam[5549:5540];
+          10'd555: vikram = ekam[5559:5550];
+          10'd556: vikram = ekam[5569:5560];
+          10'd557: vikram = ekam[5579:5570];
+          10'd558: vikram = ekam[5589:5580];
+          10'd559: vikram = ekam[5599:5590];
+          10'd560: vikram = ekam[5609:5600];
+          10'd561: vikram = ekam[5619:5610];
+          10'd562: vikram = ekam[5629:5620];
+          10'd563: vikram = ekam[5639:5630];
+          10'd564: vikram = ekam[5649:5640];
+          10'd565: vikram = ekam[5659:5650];
+          10'd566: vikram = ekam[5669:5660];
+          10'd567: vikram = ekam[5679:5670];
+          10'd568: vikram = ekam[5689:5680];
+          10'd569: vikram = ekam[5699:5690];
+          10'd570: vikram = ekam[5709:5700];
+          10'd571: vikram = ekam[5719:5710];
+          10'd572: vikram = ekam[5729:5720];
+          10'd573: vikram = ekam[5739:5730];
+          10'd574: vikram = ekam[5749:5740];
+          10'd575: vikram = ekam[5759:5750];
+          10'd576: vikram = ekam[5769:5760];
+          10'd577: vikram = ekam[5779:5770];
+          10'd578: vikram = ekam[5789:5780];
+          10'd579: vikram = ekam[5799:5790];
+          10'd580: vikram = ekam[5809:5800];
+          10'd581: vikram = ekam[5819:5810];
+          10'd582: vikram = ekam[5829:5820];
+          10'd583: vikram = ekam[5839:5830];
+          10'd584: vikram = ekam[5849:5840];
+          10'd585: vikram = ekam[5859:5850];
+          10'd586: vikram = ekam[5869:5860];
+          10'd587: vikram = ekam[5879:5870];
+          10'd588: vikram = ekam[5889:5880];
+          10'd589: vikram = ekam[5899:5890];
+          10'd590: vikram = ekam[5909:5900];
+          10'd591: vikram = ekam[5919:5910];
+          10'd592: vikram = ekam[5929:5920];
+          10'd593: vikram = ekam[5939:5930];
+          10'd594: vikram = ekam[5949:5940];
+          10'd595: vikram = ekam[5959:5950];
+          10'd596: vikram = ekam[5969:5960];
+          10'd597: vikram = ekam[5979:5970];
+          10'd598: vikram = ekam[5989:5980];
+          10'd599: vikram = ekam[5999:5990];
+          10'd600: vikram = ekam[6009:6000];
+          10'd601: vikram = ekam[6019:6010];
+          10'd602: vikram = ekam[6029:6020];
+          10'd603: vikram = ekam[6039:6030];
+          10'd604: vikram = ekam[6049:6040];
+          10'd605: vikram = ekam[6059:6050];
+          10'd606: vikram = ekam[6069:6060];
+          10'd607: vikram = ekam[6079:6070];
+          10'd608: vikram = ekam[6089:6080];
+          10'd609: vikram = ekam[6099:6090];
+          10'd610: vikram = ekam[6109:6100];
+          10'd611: vikram = ekam[6119:6110];
+          10'd612: vikram = ekam[6129:6120];
+          10'd613: vikram = ekam[6139:6130];
+          10'd614: vikram = ekam[6149:6140];
+          10'd615: vikram = ekam[6159:6150];
+          10'd616: vikram = ekam[6169:6160];
+          10'd617: vikram = ekam[6179:6170];
+          10'd618: vikram = ekam[6189:6180];
+          10'd619: vikram = ekam[6199:6190];
+          10'd620: vikram = ekam[6209:6200];
+          10'd621: vikram = ekam[6219:6210];
+          10'd622: vikram = ekam[6229:6220];
+          10'd623: vikram = ekam[6239:6230];
+          10'd624: vikram = ekam[6249:6240];
+          10'd625: vikram = ekam[6259:6250];
+          10'd626: vikram = ekam[6269:6260];
+          10'd627: vikram = ekam[6279:6270];
+          10'd628: vikram = ekam[6289:6280];
+          10'd629: vikram = ekam[6299:6290];
+          10'd630: vikram = ekam[6309:6300];
+          10'd631: vikram = ekam[6319:6310];
+          10'd632: vikram = ekam[6329:6320];
+          10'd633: vikram = ekam[6339:6330];
+          10'd634: vikram = ekam[6349:6340];
+          10'd635: vikram = ekam[6359:6350];
+          10'd636: vikram = ekam[6369:6360];
+          10'd637: vikram = ekam[6379:6370];
+          10'd638: vikram = ekam[6389:6380];
+          10'd639: vikram = ekam[6399:6390];
+          10'd640: vikram = ekam[6409:6400];
+          10'd641: vikram = ekam[6419:6410];
+          10'd642: vikram = ekam[6429:6420];
+          10'd643: vikram = ekam[6439:6430];
+          10'd644: vikram = ekam[6449:6440];
+          10'd645: vikram = ekam[6459:6450];
+          10'd646: vikram = ekam[6469:6460];
+          10'd647: vikram = ekam[6479:6470];
+          10'd648: vikram = ekam[6489:6480];
+          10'd649: vikram = ekam[6499:6490];
+          10'd650: vikram = ekam[6509:6500];
+          10'd651: vikram = ekam[6519:6510];
+          10'd652: vikram = ekam[6529:6520];
+          10'd653: vikram = ekam[6539:6530];
+          10'd654: vikram = ekam[6549:6540];
+          10'd655: vikram = ekam[6559:6550];
+          10'd656: vikram = ekam[6569:6560];
+          10'd657: vikram = ekam[6579:6570];
+          10'd658: vikram = ekam[6589:6580];
+          10'd659: vikram = ekam[6599:6590];
+          10'd660: vikram = ekam[6609:6600];
+          10'd661: vikram = ekam[6619:6610];
+          10'd662: vikram = ekam[6629:6620];
+          10'd663: vikram = ekam[6639:6630];
+          10'd664: vikram = ekam[6649:6640];
+          10'd665: vikram = ekam[6659:6650];
+          10'd666: vikram = ekam[6669:6660];
+          10'd667: vikram = ekam[6679:6670];
+          10'd668: vikram = ekam[6689:6680];
+          10'd669: vikram = ekam[6699:6690];
+          10'd670: vikram = ekam[6709:6700];
+          10'd671: vikram = ekam[6719:6710];
+          10'd672: vikram = ekam[6729:6720];
+          10'd673: vikram = ekam[6739:6730];
+          10'd674: vikram = ekam[6749:6740];
+          10'd675: vikram = ekam[6759:6750];
+          10'd676: vikram = ekam[6769:6760];
+          10'd677: vikram = ekam[6779:6770];
+          10'd678: vikram = ekam[6789:6780];
+          10'd679: vikram = ekam[6799:6790];
+          10'd680: vikram = ekam[6809:6800];
+          10'd681: vikram = ekam[6819:6810];
+          10'd682: vikram = ekam[6829:6820];
+          10'd683: vikram = ekam[6839:6830];
+          10'd684: vikram = ekam[6849:6840];
+          10'd685: vikram = ekam[6859:6850];
+          10'd686: vikram = ekam[6869:6860];
+          10'd687: vikram = ekam[6879:6870];
+          10'd688: vikram = ekam[6889:6880];
+          10'd689: vikram = ekam[6899:6890];
+          10'd690: vikram = ekam[6909:6900];
+          10'd691: vikram = ekam[6919:6910];
+          10'd692: vikram = ekam[6929:6920];
+          10'd693: vikram = ekam[6939:6930];
+          10'd694: vikram = ekam[6949:6940];
+          10'd695: vikram = ekam[6959:6950];
+          10'd696: vikram = ekam[6969:6960];
+          10'd697: vikram = ekam[6979:6970];
+          10'd698: vikram = ekam[6989:6980];
+          10'd699: vikram = ekam[6999:6990];
+          10'd700: vikram = ekam[7009:7000];
+          10'd701: vikram = ekam[7019:7010];
+          10'd702: vikram = ekam[7029:7020];
+          10'd703: vikram = ekam[7039:7030];
+          10'd704: vikram = ekam[7049:7040];
+          10'd705: vikram = ekam[7059:7050];
+          10'd706: vikram = ekam[7069:7060];
+          10'd707: vikram = ekam[7079:7070];
+          10'd708: vikram = ekam[7089:7080];
+          10'd709: vikram = ekam[7099:7090];
+          10'd710: vikram = ekam[7109:7100];
+          10'd711: vikram = ekam[7119:7110];
+          10'd712: vikram = ekam[7129:7120];
+          10'd713: vikram = ekam[7139:7130];
+          10'd714: vikram = ekam[7149:7140];
+          10'd715: vikram = ekam[7159:7150];
+          10'd716: vikram = ekam[7169:7160];
+          10'd717: vikram = ekam[7179:7170];
+          10'd718: vikram = ekam[7189:7180];
+          10'd719: vikram = ekam[7199:7190];
+          10'd720: vikram = ekam[7209:7200];
+          10'd721: vikram = ekam[7219:7210];
+          10'd722: vikram = ekam[7229:7220];
+          10'd723: vikram = ekam[7239:7230];
+          10'd724: vikram = ekam[7249:7240];
+          10'd725: vikram = ekam[7259:7250];
+          10'd726: vikram = ekam[7269:7260];
+          10'd727: vikram = ekam[7279:7270];
+          10'd728: vikram = ekam[7289:7280];
+          10'd729: vikram = ekam[7299:7290];
+          10'd730: vikram = ekam[7309:7300];
+          10'd731: vikram = ekam[7319:73",
+,,
+0];,,
+          10'd732: vikram = ekam[7329:7320];,,
+          10'd733: vikram = ekam[7339:7330];,,
+          10'd734: vikram = ekam[7349:7340];,,
+          10'd735: vikram = ekam[7359:7350];,,
+          10'd736: vikram = ekam[7369:7360];,,
+          10'd737: vikram = ekam[7379:7370];,,
+          10'd738: vikram = ekam[7389:7380];,,
+          10'd739: vikram = ekam[7399:7390];,,
+          10'd740: vikram = ekam[7409:7400];,,
+          10'd741: vikram = ekam[7419:7410];,,
+          10'd742: vikram = ekam[7429:7420];,,
+          10'd743: vikram = ekam[7439:7430];,,
+          10'd744: vikram = ekam[7449:7440];,,
+          10'd745: vikram = ekam[7459:7450];,,
+          10'd746: vikram = ekam[7469:7460];,,
+          10'd747: vikram = ekam[7479:7470];,,
+          10'd748: vikram = ekam[7489:7480];,,
+          10'd749: vikram = ekam[7499:7490];,,
+          10'd750: vikram = ekam[7509:7500];,,
+          10'd751: vikram = ekam[7519:7510];,,
+          10'd752: vikram = ekam[7529:7520];,,
+          10'd753: vikram = ekam[7539:7530];,,
+          10'd754: vikram = ekam[7549:7540];,,
+          10'd755: vikram = ekam[7559:7550];,,
+          10'd756: vikram = ekam[7569:7560];,,
+          10'd757: vikram = ekam[7579:7570];,,
+          10'd758: vikram = ekam[7589:7580];,,
+          10'd759: vikram = ekam[7599:7590];,,
+          10'd760: vikram = ekam[7609:7600];,,
+          10'd761: vikram = ekam[7619:7610];,,
+          10'd762: vikram = ekam[7629:7620];,,
+          10'd763: vikram = ekam[7639:7630];,,
+          10'd764: vikram = ekam[7649:7640];,,
+          10'd765: vikram = ekam[7659:7650];,,
+          10'd766: vikram = ekam[7669:7660];,,
+          10'd767: vikram = ekam[7679:7670];,,
+          10'd768: vikram = ekam[7689:7680];,,
+          10'd769: vikram = ekam[7699:7690];,,
+          10'd770: vikram = ekam[7709:7700];,,
+          10'd771: vikram = ekam[7719:7710];,,
+          10'd772: vikram = ekam[7729:7720];,,
+          10'd773: vikram = ekam[7739:7730];,,
+          10'd774: vikram = ekam[7749:7740];,,
+          10'd775: vikram = ekam[7759:7750];,,
+          10'd776: vikram = ekam[7769:7760];,,
+          10'd777: vikram = ekam[7779:7770];,,
+          10'd778: vikram = ekam[7789:7780];,,
+          10'd779: vikram = ekam[7799:7790];,,
+          10'd780: vikram = ekam[7809:7800];,,
+          10'd781: vikram = ekam[7819:7810];,,
+          10'd782: vikram = ekam[7829:7820];,,
+          10'd783: vikram = ekam[7839:7830];,,
+          10'd784: vikram = ekam[7849:7840];,,
+          10'd785: vikram = ekam[7859:7850];,,
+          10'd786: vikram = ekam[7869:7860];,,
+          10'd787: vikram = ekam[7879:7870];,,
+          10'd788: vikram = ekam[7889:7880];,,
+          10'd789: vikram = ekam[7899:7890];,,
+          10'd790: vikram = ekam[7909:7900];,,
+          10'd791: vikram = ekam[7919:7910];,,
+          10'd792: vikram = ekam[7929:7920];,,
+          10'd793: vikram = ekam[7939:7930];,,
+          10'd794: vikram = ekam[7949:7940];,,
+          10'd795: vikram = ekam[7959:7950];,,
+          10'd796: vikram = ekam[7969:7960];,,
+          10'd797: vikram = ekam[7979:7970];,,
+          10'd798: vikram = ekam[7989:7980];,,
+          10'd799: vikram = ekam[7999:7990];,,
+          10'd800: vikram = ekam[8009:8000];,,
+          10'd801: vikram = ekam[8019:8010];,,
+          10'd802: vikram = ekam[8029:8020];,,
+          10'd803: vikram = ekam[8039:8030];,,
+          10'd804: vikram = ekam[8049:8040];,,
+          10'd805: vikram = ekam[8059:8050];,,
+          10'd806: vikram = ekam[8069:8060];,,
+          10'd807: vikram = ekam[8079:8070];,,
+          10'd808: vikram = ekam[8089:8080];,,
+          10'd809: vikram = ekam[8099:8090];,,
+          10'd810: vikram = ekam[8109:8100];,,
+          10'd811: vikram = ekam[8119:8110];,,
+          10'd812: vikram = ekam[8129:8120];,,
+          10'd813: vikram = ekam[8139:8130];,,
+          10'd814: vikram = ekam[8149:8140];,,
+          10'd815: vikram = ekam[8159:8150];,,
+          10'd816: vikram = ekam[8169:8160];,,
+          10'd817: vikram = ekam[8179:8170];,,
+          10'd818: vikram = ekam[8189:8180];,,
+          10'd819: vikram = ekam[8199:8190];,,
+          10'd820: vikram = ekam[8209:8200];,,
+          10'd821: vikram = ekam[8219:8210];,,
+          10'd822: vikram = ekam[8229:8220];,,
+          10'd823: vikram = ekam[8239:8230];,,
+          10'd824: vikram = ekam[8249:8240];,,
+          10'd825: vikram = ekam[8259:8250];,,
+          10'd826: vikram = ekam[8269:8260];,,
+          10'd827: vikram = ekam[8279:8270];,,
+          10'd828: vikram = ekam[8289:8280];,,
+          10'd829: vikram = ekam[8299:8290];,,
+          10'd830: vikram = ekam[8309:8300];,,
+          10'd831: vikram = ekam[8319:8310];,,
+          10'd832: vikram = ekam[8329:8320];,,
+          10'd833: vikram = ekam[8339:8330];,,
+          10'd834: vikram = ekam[8349:8340];,,
+          10'd835: vikram = ekam[8359:8350];,,
+          10'd836: vikram = ekam[8369:8360];,,
+          10'd837: vikram = ekam[8379:8370];,,
+          10'd838: vikram = ekam[8389:8380];,,
+          10'd839: vikram = ekam[8399:8390];,,
+          10'd840: vikram = ekam[8409:8400];,,
+          10'd841: vikram = ekam[8419:8410];,,
+          10'd842: vikram = ekam[8429:8420];,,
+          10'd843: vikram = ekam[8439:8430];,,
+          10'd844: vikram = ekam[8449:8440];,,
+          10'd845: vikram = ekam[8459:8450];,,
+          10'd846: vikram = ekam[8469:8460];,,
+          10'd847: vikram = ekam[8479:8470];,,
+          10'd848: vikram = ekam[8489:8480];,,
+          10'd849: vikram = ekam[8499:8490];,,
+          10'd850: vikram = ekam[8509:8500];,,
+          10'd851: vikram = ekam[8519:8510];,,
+          10'd852: vikram = ekam[8529:8520];,,
+          10'd853: vikram = ekam[8539:8530];,,
+          10'd854: vikram = ekam[8549:8540];,,
+          10'd855: vikram = ekam[8559:8550];,,
+          10'd856: vikram = ekam[8569:8560];,,
+          10'd857: vikram = ekam[8579:8570];,,
+          10'd858: vikram = ekam[8589:8580];,,
+          10'd859: vikram = ekam[8599:8590];,,
+          10'd860: vikram = ekam[8609:8600];,,
+          10'd861: vikram = ekam[8619:8610];,,
+          10'd862: vikram = ekam[8629:8620];,,
+          10'd863: vikram = ekam[8639:8630];,,
+          10'd864: vikram = ekam[8649:8640];,,
+          10'd865: vikram = ekam[8659:8650];,,
+          10'd866: vikram = ekam[8669:8660];,,
+          10'd867: vikram = ekam[8679:8670];,,
+          10'd868: vikram = ekam[8689:8680];,,
+          10'd869: vikram = ekam[8699:8690];,,
+          10'd870: vikram = ekam[8709:8700];,,
+          10'd871: vikram = ekam[8719:8710];,,
+          10'd872: vikram = ekam[8729:8720];,,
+          10'd873: vikram = ekam[8739:8730];,,
+          10'd874: vikram = ekam[8749:8740];,,
+          10'd875: vikram = ekam[8759:8750];,,
+          default: vikram = 'b0;,,
+        endcase,,
+      endmodule,,
+"      ""","<s>[INST]<<SYS>>Below is an instruction that describe a task. Write a response that appropriately completes the request.<</SYS>>create 876:1 mux with output vikram and input ekam[9:$][/INST]      module mux_876to1(
+        input [8759:0] ekam,
+        input [9:0] select,
+        output reg vikram
+      );
+      always @(*)
+        case(select)
+          10'd0: vikram = ekam[9:0];
+          10'd1: vikram = ekam[19:10];
+          10'd2: vikram = ekam[29:20];
+          10'd3: vikram = ekam[39:30];
+          10'd4: vikram = ekam[49:40];
+          10'd5: vikram = ekam[59:50];
+          10'd6: vikram = ekam[69:60];
+          10'd7: vikram = ekam[79:70];
+          10'd8: vikram = ekam[89:80];
+          10'd9: vikram = ekam[99:90];
+          10'd10: vikram = ekam[109:100];
+          10'd11: vikram = ekam[119:110];
+          10'd12: vikram = ekam[129:120];
+          10'd13: vikram = ekam[139:130];
+          10'd14: vikram = ekam[149:140];
+          10'd15: vikram = ekam[159:150];
+          10'd16: vikram = ekam[169:160];
+          10'd17: vikram = ekam[179:170];
+          10'd18: vikram = ekam[189:180];
+          10'd19: vikram = ekam[199:190];
+          10'd20: vikram = ekam[209:200];
+          10'd21: vikram = ekam[219:210];
+          10'd22: vikram = ekam[229:220];
+          10'd23: vikram = ekam[239:230];
+          10'd24: vikram = ekam[249:240];
+          10'd25: vikram = ekam[259:250];
+          10'd26: vikram = ekam[269:260];
+          10'd27: vikram = ekam[279:270];
+          10'd28: vikram = ekam[289:280];
+          10'd29: vikram = ekam[299:290];
+          10'd30: vikram = ekam[309:300];
+          10'd31: vikram = ekam[319:310];
+          10'd32: vikram = ekam[329:320];
+          10'd33: vikram = ekam[339:330];
+          10'd34: vikram = ekam[349:340];
+          10'd35: vikram = ekam[359:350];
+          10'd36: vikram = ekam[369:360];
+          10'd37: vikram = ekam[379:370];
+          10'd38: vikram = ekam[389:380];
+          10'd39: vikram = ekam[399:390];
+          10'd40: vikram = ekam[409:400];
+          10'd41: vikram = ekam[419:410];
+          10'd42: vikram = ekam[429:420];
+          10'd43: vikram = ekam[439:430];
+          10'd44: vikram = ekam[449:440];
+          10'd45: vikram = ekam[459:450];
+          10'd46: vikram = ekam[469:460];
+          10'd47: vikram = ekam[479:470];
+          10'd48: vikram = ekam[489:480];
+          10'd49: vikram = ekam[499:490];
+          10'd50: vikram = ekam[509:500];
+          10'd51: vikram = ekam[519:510];
+          10'd52: vikram = ekam[529:520];
+          10'd53: vikram = ekam[539:530];
+          10'd54: vikram = ekam[549:540];
+          10'd55: vikram = ekam[559:550];
+          10'd56: vikram = ekam[569:560];
+          10'd57: vikram = ekam[579:570];
+          10'd58: vikram = ekam[589:580];
+          10'd59: vikram = ekam[599:590];
+          10'd60: vikram = ekam[609:600];
+          10'd61: vikram = ekam[619:610];
+          10'd62: vikram = ekam[629:620];
+          10'd63: vikram = ekam[639:630];
+          10'd64: vikram = ekam[649:640];
+          10'd65: vikram = ekam[659:650];
+          10'd66: vikram = ekam[669:660];
+          10'd67: vikram = ekam[679:670];
+          10'd68: vikram = ekam[689:680];
+          10'd69: vikram = ekam[699:690];
+          10'd70: vikram = ekam[709:700];
+          10'd71: vikram = ekam[719:710];
+          10'd72: vikram = ekam[729:720];
+          10'd73: vikram = ekam[739:730];
+          10'd74: vikram = ekam[749:740];
+          10'd75: vikram = ekam[759:750];
+          10'd76: vikram = ekam[769:760];
+          10'd77: vikram = ekam[779:770];
+          10'd78: vikram = ekam[789:780];
+          10'd79: vikram = ekam[799:790];
+          10'd80: vikram = ekam[809:800];
+          10'd81: vikram = ekam[819:810];
+          10'd82: vikram = ekam[829:820];
+          10'd83: vikram = ekam[839:830];
+          10'd84: vikram = ekam[849:840];
+          10'd85: vikram = ekam[859:850];
+          10'd86: vikram = ekam[869:860];
+          10'd87: vikram = ekam[879:870];
+          10'd88: vikram = ekam[889:880];
+          10'd89: vikram = ekam[899:890];
+          10'd90: vikram = ekam[909:900];
+          10'd91: vikram = ekam[919:910];
+          10'd92: vikram = ekam[929:920];
+          10'd93: vikram = ekam[939:930];
+          10'd94: vikram = ekam[949:940];
+          10'd95: vikram = ekam[959:950];
+          10'd96: vikram = ekam[969:960];
+          10'd97: vikram = ekam[979:970];
+          10'd98: vikram = ekam[989:980];
+          10'd99: vikram = ekam[999:990];
+          10'd100: vikram = ekam[1009:1000];
+          10'd101: vikram = ekam[1019:1010];
+          10'd102: vikram = ekam[1029:1020];
+          10'd103: vikram = ekam[1039:1030];
+          10'd104: vikram = ekam[1049:1040];
+          10'd105: vikram = ekam[1059:1050];
+          10'd106: vikram = ekam[1069:1060];
+          10'd107: vikram = ekam[1079:1070];
+          10'd108: vikram = ekam[1089:1080];
+          10'd109: vikram = ekam[1099:1090];
+          10'd110: vikram = ekam[1109:1100];
+          10'd111: vikram = ekam[1119:1110];
+          10'd112: vikram = ekam[1129:1120];
+          10'd113: vikram = ekam[1139:1130];
+          10'd114: vikram = ekam[1149:1140];
+          10'd115: vikram = ekam[1159:1150];
+          10'd116: vikram = ekam[1169:1160];
+          10'd117: vikram = ekam[1179:1170];
+          10'd118: vikram = ekam[1189:1180];
+          10'd119: vikram = ekam[1199:1190];
+          10'd120: vikram = ekam[1209:1200];
+          10'd121: vikram = ekam[1219:1210];
+          10'd122: vikram = ekam[1229:1220];
+          10'd123: vikram = ekam[1239:1230];
+          10'd124: vikram = ekam[1249:1240];
+          10'd125: vikram = ekam[1259:1250];
+          10'd126: vikram = ekam[1269:1260];
+          10'd127: vikram = ekam[1279:1270];
+          10'd128: vikram = ekam[1289:1280];
+          10'd129: vikram = ekam[1299:1290];
+          10'd130: vikram = ekam[1309:1300];
+          10'd131: vikram = ekam[1319:1310];
+          10'd132: vikram = ekam[1329:1320];
+          10'd133: vikram = ekam[1339:1330];
+          10'd134: vikram = ekam[1349:1340];
+          10'd135: vikram = ekam[1359:1350];
+          10'd136: vikram = ekam[1369:1360];
+          10'd137: vikram = ekam[1379:1370];
+          10'd138: vikram = ekam[1389:1380];
+          10'd139: vikram = ekam[1399:1390];
+          10'd140: vikram = ekam[1409:1400];
+          10'd141: vikram = ekam[1419:1410];
+          10'd142: vikram = ekam[1429:1420];
+          10'd143: vikram = ekam[1439:1430];
+          10'd144: vikram = ekam[1449:1440];
+          10'd145: vikram = ekam[1459:1450];
+          10'd146: vikram = ekam[1469:1460];
+          10'd147: vikram = ekam[1479:1470];
+          10'd148: vikram = ekam[1489:1480];
+          10'd149: vikram = ekam[1499:1490];
+          10'd150: vikram = ekam[1509:1500];
+          10'd151: vikram = ekam[1519:1510];
+          10'd152: vikram = ekam[1529:1520];
+          10'd153: vikram = ekam[1539:1530];
+          10'd154: vikram = ekam[1549:1540];
+          10'd155: vikram = ekam[1559:1550];
+          10'd156: vikram = ekam[1569:1560];
+          10'd157: vikram = ekam[1579:1570];
+          10'd158: vikram = ekam[1589:1580];
+          10'd159: vikram = ekam[1599:1590];
+          10'd160: vikram = ekam[1609:1600];
+          10'd161: vikram = ekam[1619:1610];
+          10'd162: vikram = ekam[1629:1620];
+          10'd163: vikram = ekam[1639:1630];
+          10'd164: vikram = ekam[1649:1640];
+          10'd165: vikram = ekam[1659:1650];
+          10'd166: vikram = ekam[1669:1660];
+          10'd167: vikram = ekam[1679:1670];
+          10'd168: vikram = ekam[1689:1680];
+          10'd169: vikram = ekam[1699:1690];
+          10'd170: vikram = ekam[1709:1700];
+          10'd171: vikram = ekam[1719:1710];
+          10'd172: vikram = ekam[1729:1720];
+          10'd173: vikram = ekam[1739:1730];
+          10'd174: vikram = ekam[1749:1740];
+          10'd175: vikram = ekam[1759:1750];
+          10'd176: vikram = ekam[1769:1760];
+          10'd177: vikram = ekam[1779:1770];
+          10'd178: vikram = ekam[1789:1780];
+          10'd179: vikram = ekam[1799:1790];
+          10'd180: vikram = ekam[1809:1800];
+          10'd181: vikram = ekam[1819:1810];
+          10'd182: vikram = ekam[1829:1820];
+          10'd183: vikram = ekam[1839:1830];
+          10'd184: vikram = ekam[1849:1840];
+          10'd185: vikram = ekam[1859:1850];
+          10'd186: vikram = ekam[1869:1860];
+          10'd187: vikram = ekam[1879:1870];
+          10'd188: vikram = ekam[1889:1880];
+          10'd189: vikram = ekam[1899:1890];
+          10'd190: vikram = ekam[1909:1900];
+          10'd191: vikram = ekam[1919:1910];
+          10'd192: vikram = ekam[1929:1920];
+          10'd193: vikram = ekam[1939:1930];
+          10'd194: vikram = ekam[1949:1940];
+          10'd195: vikram = ekam[1959:1950];
+          10'd196: vikram = ekam[1969:1960];
+          10'd197: vikram = ekam[1979:1970];
+          10'd198: vikram = ekam[1989:1980];
+          10'd199: vikram = ekam[1999:1990];
+          10'd200: vikram = ekam[2009:2000];
+          10'd201: vikram = ekam[2019:2010];
+          10'd202: vikram = ekam[2029:2020];
+          10'd203: vikram = ekam[2039:2030];
+          10'd204: vikram = ekam[2049:2040];
+          10'd205: vikram = ekam[2059:2050];
+          10'd206: vikram = ekam[2069:2060];
+          10'd207: vikram = ekam[2079:2070];
+          10'd208: vikram = ekam[2089:2080];
+          10'd209: vikram = ekam[2099:2090];
+          10'd210: vikram = ekam[2109:2100];
+          10'd211: vikram = ekam[2119:2110];
+          10'd212: vikram = ekam[2129:2120];
+          10'd213: vikram = ekam[2139:2130];
+          10'd214: vikram = ekam[2149:2140];
+          10'd215: vikram = ekam[2159:2150];
+          10'd216: vikram = ekam[2169:2160];
+          10'd217: vikram = ekam[2179:2170];
+          10'd218: vikram = ekam[2189:2180];
+          10'd219: vikram = ekam[2199:2190];
+          10'd220: vikram = ekam[2209:2200];
+          10'd221: vikram = ekam[2219:2210];
+          10'd222: vikram = ekam[2229:2220];
+          10'd223: vikram = ekam[2239:2230];
+          10'd224: vikram = ekam[2249:2240];
+          10'd225: vikram = ekam[2259:2250];
+          10'd226: vikram = ekam[2269:2260];
+          10'd227: vikram = ekam[2279:2270];
+          10'd228: vikram = ekam[2289:2280];
+          10'd229: vikram = ekam[2299:2290];
+          10'd230: vikram = ekam[2309:2300];
+          10'd231: vikram = ekam[2319:2310];
+          10'd232: vikram = ekam[2329:2320];
+          10'd233: vikram = ekam[2339:2330];
+          10'd234: vikram = ekam[2349:2340];
+          10'd235: vikram = ekam[2359:2350];
+          10'd236: vikram = ekam[2369:2360];
+          10'd237: vikram = ekam[2379:2370];
+          10'd238: vikram = ekam[2389:2380];
+          10'd239: vikram = ekam[2399:2390];
+          10'd240: vikram = ekam[2409:2400];
+          10'd241: vikram = ekam[2419:2410];
+          10'd242: vikram = ekam[2429:2420];
+          10'd243: vikram = ekam[2439:2430];
+          10'd244: vikram = ekam[2449:2440];
+          10'd245: vikram = ekam[2459:2450];
+          10'd246: vikram = ekam[2469:2460];
+          10'd247: vikram = ekam[2479:2470];
+          10'd248: vikram = ekam[2489:2480];
+          10'd249: vikram = ekam[2499:2490];
+          10'd250: vikram = ekam[2509:2500];
+          10'd251: vikram = ekam[2519:2510];
+          10'd252: vikram = ekam[2529:2520];
+          10'd253: vikram = ekam[2539:2530];
+          10'd254: vikram = ekam[2549:2540];
+          10'd255: vikram = ekam[2559:2550];
+          10'd256: vikram = ekam[2569:2560];
+          10'd257: vikram = ekam[2579:2570];
+          10'd258: vikram = ekam[2589:2580];
+          10'd259: vikram = ekam[2599:2590];
+          10'd260: vikram = ekam[2609:2600];
+          10'd261: vikram = ekam[2619:2610];
+          10'd262: vikram = ekam[2629:2620];
+          10'd263: vikram = ekam[2639:2630];
+          10'd264: vikram = ekam[2649:2640];
+          10'd265: vikram = ekam[2659:2650];
+          10'd266: vikram = ekam[2669:2660];
+          10'd267: vikram = ekam[2679:2670];
+          10'd268: vikram = ekam[2689:2680];
+          10'd269: vikram = ekam[2699:2690];
+          10'd270: vikram = ekam[2709:2700];
+          10'd271: vikram = ekam[2719:2710];
+          10'd272: vikram = ekam[2729:2720];
+          10'd273: vikram = ekam[2739:2730];
+          10'd274: vikram = ekam[2749:2740];
+          10'd275: vikram = ekam[2759:2750];
+          10'd276: vikram = ekam[2769:2760];
+          10'd277: vikram = ekam[2779:2770];
+          10'd278: vikram = ekam[2789:2780];
+          10'd279: vikram = ekam[2799:2790];
+          10'd280: vikram = ekam[2809:2800];
+          10'd281: vikram = ekam[2819:2810];
+          10'd282: vikram = ekam[2829:2820];
+          10'd283: vikram = ekam[2839:2830];
+          10'd284: vikram = ekam[2849:2840];
+          10'd285: vikram = ekam[2859:2850];
+          10'd286: vikram = ekam[2869:2860];
+          10'd287: vikram = ekam[2879:2870];
+          10'd288: vikram = ekam[2889:2880];
+          10'd289: vikram = ekam[2899:2890];
+          10'd290: vikram = ekam[2909:2900];
+          10'd291: vikram = ekam[2919:2910];
+          10'd292: vikram = ekam[2929:2920];
+          10'd293: vikram = ekam[2939:2930];
+          10'd294: vikram = ekam[2949:2940];
+          10'd295: vikram = ekam[2959:2950];
+          10'd296: vikram = ekam[2969:2960];
+          10'd297: vikram = ekam[2979:2970];
+          10'd298: vikram = ekam[2989:2980];
+          10'd299: vikram = ekam[2999:2990];
+          10'd300: vikram = ekam[3009:3000];
+          10'd301: vikram = ekam[3019:3010];
+          10'd302: vikram = ekam[3029:3020];
+          10'd303: vikram = ekam[3039:3030];
+          10'd304: vikram = ekam[3049:3040];
+          10'd305: vikram = ekam[3059:3050];
+          10'd306: vikram = ekam[3069:3060];
+          10'd307: vikram = ekam[3079:3070];
+          10'd308: vikram = ekam[3089:3080];
+          10'd309: vikram = ekam[3099:3090];
+          10'd310: vikram = ekam[3109:3100];
+          10'd311: vikram = ekam[3119:3110];
+          10'd312: vikram = ekam[3129:3120];
+          10'd313: vikram = ekam[3139:3130];
+          10'd314: vikram = ekam[3149:3140];
+          10'd315: vikram = ekam[3159:3150];
+          10'd316: vikram = ekam[3169:3160];
+          10'd317: vikram = ekam[3179:3170];
+          10'd318: vikram = ekam[3189:3180];
+          10'd319: vikram = ekam[3199:3190];
+          10'd320: vikram = ekam[3209:3200];
+          10'd321: vikram = ekam[3219:3210];
+          10'd322: vikram = ekam[3229:3220];
+          10'd323: vikram = ekam[3239:3230];
+          10'd324: vikram = ekam[3249:3240];
+          10'd325: vikram = ekam[3259:3250];
+          10'd326: vikram = ekam[3269:3260];
+          10'd327: vikram = ekam[3279:3270];
+          10'd328: vikram = ekam[3289:3280];
+          10'd329: vikram = ekam[3299:3290];
+          10'd330: vikram = ekam[3309:3300];
+          10'd331: vikram = ekam[3319:3310];
+          10'd332: vikram = ekam[3329:3320];
+          10'd333: vikram = ekam[3339:3330];
+          10'd334: vikram = ekam[3349:3340];
+          10'd335: vikram = ekam[3359:3350];
+          10'd336: vikram = ekam[3369:3360];
+          10'd337: vikram = ekam[3379:3370];
+          10'd338: vikram = ekam[3389:3380];
+          10'd339: vikram = ekam[3399:3390];
+          10'd340: vikram = ekam[3409:3400];
+          10'd341: vikram = ekam[3419:3410];
+          10'd342: vikram = ekam[3429:3420];
+          10'd343: vikram = ekam[3439:3430];
+          10'd344: vikram = ekam[3449:3440];
+          10'd345: vikram = ekam[3459:3450];
+          10'd346: vikram = ekam[3469:3460];
+          10'd347: vikram = ekam[3479:3470];
+          10'd348: vikram = ekam[3489:3480];
+          10'd349: vikram = ekam[3499:3490];
+          10'd350: vikram = ekam[3509:3500];
+          10'd351: vikram = ekam[3519:3510];
+          10'd352: vikram = ekam[3529:3520];
+          10'd353: vikram = ekam[3539:3530];
+          10'd354: vikram = ekam[3549:3540];
+          10'd355: vikram = ekam[3559:3550];
+          10'd356: vikram = ekam[3569:3560];
+          10'd357: vikram = ekam[3579:3570];
+          10'd358: vikram = ekam[3589:3580];
+          10'd359: vikram = ekam[3599:3590];
+          10'd360: vikram = ekam[3609:3600];
+          10'd361: vikram = ekam[3619:3610];
+          10'd362: vikram = ekam[3629:3620];
+          10'd363: vikram = ekam[3639:3630];
+          10'd364: vikram = ekam[3649:3640];
+          10'd365: vikram = ekam[3659:3650];
+          10'd366: vikram = ekam[3669:3660];
+          10'd367: vikram = ekam[3679:3670];
+          10'd368: vikram = ekam[3689:3680];
+          10'd369: vikram = ekam[3699:3690];
+          10'd370: vikram = ekam[3709:3700];
+          10'd371: vikram = ekam[3719:3710];
+          10'd372: vikram = ekam[3729:3720];
+          10'd373: vikram = ekam[3739:3730];
+          10'd374: vikram = ekam[3749:3740];
+          10'd375: vikram = ekam[3759:3750];
+          10'd376: vikram = ekam[3769:3760];
+          10'd377: vikram = ekam[3779:3770];
+          10'd378: vikram = ekam[3789:3780];
+          10'd379: vikram = ekam[3799:3790];
+          10'd380: vikram = ekam[3809:3800];
+          10'd381: vikram = ekam[3819:3810];
+          10'd382: vikram = ekam[3829:3820];
+          10'd383: vikram = ekam[3839:3830];
+          10'd384: vikram = ekam[3849:3840];
+          10'd385: vikram = ekam[3859:3850];
+          10'd386: vikram = ekam[3869:3860];
+          10'd387: vikram = ekam[3879:3870];
+          10'd388: vikram = ekam[3889:3880];
+          10'd389: vikram = ekam[3899:3890];
+          10'd390: vikram = ekam[3909:3900];
+          10'd391: vikram = ekam[3919:3910];
+          10'd392: vikram = ekam[3929:3920];
+          10'd393: vikram = ekam[3939:3930];
+          10'd394: vikram = ekam[3949:3940];
+          10'd395: vikram = ekam[3959:3950];
+          10'd396: vikram = ekam[3969:3960];
+          10'd397: vikram = ekam[3979:3970];
+          10'd398: vikram = ekam[3989:3980];
+          10'd399: vikram = ekam[3999:3990];
+          10'd400: vikram = ekam[4009:4000];
+          10'd401: vikram = ekam[4019:4010];
+          10'd402: vikram = ekam[4029:4020];
+          10'd403: vikram = ekam[4039:4030];
+          10'd404: vikram = ekam[4049:4040];
+          10'd405: vikram = ekam[4059:4050];
+          10'd406: vikram = ekam[4069:4060];
+          10'd407: vikram = ekam[4079:4070];
+          10'd408: vikram = ekam[4089:4080];
+          10'd409: vikram = ekam[4099:4090];
+          10'd410: vikram = ekam[4109:4100];
+          10'd411: vikram = ekam[4119:4110];
+          10'd412: vikram = ekam[4129:4120];
+          10'd413: vikram = ekam[4139:4130];
+          10'd414: vikram = ekam[4149:4140];
+          10'd415: vikram = ekam[4159:4150];
+          10'd416: vikram = ekam[4169:4160];
+          10'd417: vikram = ekam[4179:4170];
+          10'd418: vikram = ekam[4189:4180];
+          10'd419: vikram = ekam[4199:4190];
+          10'd420: vikram = ekam[4209:4200];
+          10'd421: vikram = ekam[4219:4210];
+          10'd422: vikram = ekam[4229:4220];
+          10'd423: vikram = ekam[4239:4230];
+          10'd424: vikram = ekam[4249:4240];
+          10'd425: vikram = ekam[4259:4250];
+          10'd426: vikram = ekam[4269:4260];
+          10'd427: vikram = ekam[4279:4270];
+          10'd428: vikram = ekam[4289:4280];
+          10'd429: vikram = ekam[4299:4290];
+          10'd430: vikram = ekam[4309:4300];
+          10'd431: vikram = ekam[4319:4310];
+          10'd432: vikram = ekam[4329:4320];
+          10'd433: vikram = ekam[4339:4330];
+          10'd434: vikram = ekam[4349:4340];
+          10'd435: vikram = ekam[4359:4350];
+          10'd436: vikram = ekam[4369:4360];
+          10'd437: vikram = ekam[4379:4370];
+          10'd438: vikram = ekam[4389:4380];
+          10'd439: vikram = ekam[4399:4390];
+          10'd440: vikram = ekam[4409:4400];
+          10'd441: vikram = ekam[4419:4410];
+          10'd442: vikram = ekam[4429:4420];
+          10'd443: vikram = ekam[4439:4430];
+          10'd444: vikram = ekam[4449:4440];
+          10'd445: vikram = ekam[4459:4450];
+          10'd446: vikram = ekam[4469:4460];
+          10'd447: vikram = ekam[4479:4470];
+          10'd448: vikram = ekam[4489:4480];
+          10'd449: vikram = ekam[4499:4490];
+          10'd450: vikram = ekam[4509:4500];
+          10'd451: vikram = ekam[4519:4510];
+          10'd452: vikram = ekam[4529:4520];
+          10'd453: vikram = ekam[4539:4530];
+          10'd454: vikram = ekam[4549:4540];
+          10'd455: vikram = ekam[4559:4550];
+          10'd456: vikram = ekam[4569:4560];
+          10'd457: vikram = ekam[4579:4570];
+          10'd458: vikram = ekam[4589:4580];
+          10'd459: vikram = ekam[4599:4590];
+          10'd460: vikram = ekam[4609:4600];
+          10'd461: vikram = ekam[4619:4610];
+          10'd462: vikram = ekam[4629:4620];
+          10'd463: vikram = ekam[4639:4630];
+          10'd464: vikram = ekam[4649:4640];
+          10'd465: vikram = ekam[4659:4650];
+          10'd466: vikram = ekam[4669:4660];
+          10'd467: vikram = ekam[4679:4670];
+          10'd468: vikram = ekam[4689:4680];
+          10'd469: vikram = ekam[4699:4690];
+          10'd470: vikram = ekam[4709:4700];
+          10'd471: vikram = ekam[4719:4710];
+          10'd472: vikram = ekam[4729:4720];
+          10'd473: vikram = ekam[4739:4730];
+          10'd474: vikram = ekam[4749:4740];
+          10'd475: vikram = ekam[4759:4750];
+          10'd476: vikram = ekam[4769:4760];
+          10'd477: vikram = ekam[4779:4770];
+          10'd478: vikram = ekam[4789:4780];
+          10'd479: vikram = ekam[4799:4790];
+          10'd480: vikram = ekam[4809:4800];
+          10'd481: vikram = ekam[4819:4810];
+          10'd482: vikram = ekam[4829:4820];
+          10'd483: vikram = ekam[4839:4830];
+          10'd484: vikram = ekam[4849:4840];
+          10'd485: vikram = ekam[4859:4850];
+          10'd486: vikram = ekam[4869:4860];
+          10'd487: vikram = ekam[4879:4870];
+          10'd488: vikram = ekam[4889:4880];
+          10'd489: vikram = ekam[4899:4890];
+          10'd490: vikram = ekam[4909:4900];
+          10'd491: vikram = ekam[4919:4910];
+          10'd492: vikram = ekam[4929:4920];
+          10'd493: vikram = ekam[4939:4930];
+          10'd494: vikram = ekam[4949:4940];
+          10'd495: vikram = ekam[4959:4950];
+          10'd496: vikram = ekam[4969:4960];
+          10'd497: vikram = ekam[4979:4970];
+          10'd498: vikram = ekam[4989:4980];
+          10'd499: vikram = ekam[4999:4990];
+          10'd500: vikram = ekam[5009:5000];
+          10'd501: vikram = ekam[5019:5010];
+          10'd502: vikram = ekam[5029:5020];
+          10'd503: vikram = ekam[5039:5030];
+          10'd504: vikram = ekam[5049:5040];
+          10'd505: vikram = ekam[5059:5050];
+          10'd506: vikram = ekam[5069:5060];
+          10'd507: vikram = ekam[5079:5070];
+          10'd508: vikram = ekam[5089:5080];
+          10'd509: vikram = ekam[5099:5090];
+          10'd510: vikram = ekam[5109:5100];
+          10'd511: vikram = ekam[5119:5110];
+          10'd512: vikram = ekam[5129:5120];
+          10'd513: vikram = ekam[5139:5130];
+          10'd514: vikram = ekam[5149:5140];
+          10'd515: vikram = ekam[5159:5150];
+          10'd516: vikram = ekam[5169:5160];
+          10'd517: vikram = ekam[5179:5170];
+          10'd518: vikram = ekam[5189:5180];
+          10'd519: vikram = ekam[5199:5190];
+          10'd520: vikram = ekam[5209:5200];
+          10'd521: vikram = ekam[5219:5210];
+          10'd522: vikram = ekam[5229:5220];
+          10'd523: vikram = ekam[5239:5230];
+          10'd524: vikram = ekam[5249:5240];
+          10'd525: vikram = ekam[5259:5250];
+          10'd526: vikram = ekam[5269:5260];
+          10'd527: vikram = ekam[5279:5270];
+          10'd528: vikram = ekam[5289:5280];
+          10'd529: vikram = ekam[5299:5290];
+          10'd530: vikram = ekam[5309:5300];
+          10'd531: vikram = ekam[5319:5310];
+          10'd532: vikram = ekam[5329:5320];
+          10'd533: vikram = ekam[5339:5330];
+          10'd534: vikram = ekam[5349:5340];
+          10'd535: vikram = ekam[5359:5350];
+          10'd536: vikram = ekam[5369:5360];
+          10'd537: vikram = ekam[5379:5370];
+          10'd538: vikram = ekam[5389:5380];
+          10'd539: vikram = ekam[5399:5390];
+          10'd540: vikram = ekam[5409:5400];
+          10'd541: vikram = ekam[5419:5410];
+          10'd542: vikram = ekam[5429:5420];
+          10'd543: vikram = ekam[5439:5430];
+          10'd544: vikram = ekam[5449:5440];
+          10'd545: vikram = ekam[5459:5450];
+          10'd546: vikram = ekam[5469:5460];
+          10'd547: vikram = ekam[5479:5470];
+          10'd548: vikram = ekam[5489:5480];
+          10'd549: vikram = ekam[5499:5490];
+          10'd550: vikram = ekam[5509:5500];
+          10'd551: vikram = ekam[5519:5510];
+          10'd552: vikram = ekam[5529:5520];
+          10'd553: vikram = ekam[5539:5530];
+          10'd554: vikram = ekam[5549:5540];
+          10'd555: vikram = ekam[5559:5550];
+          10'd556: vikram = ekam[5569:5560];
+          10'd557: vikram = ekam[5579:5570];
+          10'd558: vikram = ekam[5589:5580];
+          10'd559: vikram = ekam[5599:5590];
+          10'd560: vikram = ekam[5609:5600];
+          10'd561: vikram = ekam[5619:5610];
+          10'd562: vikram = ekam[5629:5620];
+          10'd563: vikram = ekam[5639:5630];
+          10'd564: vikram = ekam[5649:5640];
+          10'd565: vikram = ekam[5659:5650];
+          10'd566: vikram = ekam[5669:5660];
+          10'd567: vikram = ekam[5679:5670];
+          10'd568: vikram = ekam[5689:5680];
+          10'd569: vikram = ekam[5699:5690];
+          10'd570: vikram = ekam[5709:5700];
+          10'd571: vikram = ekam[5719:5710];
+          10'd572: vikram = ekam[5729:5720];
+          10'd573: vikram = ekam[5739:5730];
+          10'd574: vikram = ekam[5749:5740];
+          10'd575: vikram = ekam[5759:5750];
+          10'd576: vikram = ekam[5769:5760];
+          10'd577: vikram = ekam[5779:5770];
+          10'd578: vikram = ekam[5789:5780];
+          10'd579: vikram = ekam[5799:5790];
+          10'd580: vikram = ekam[5809:5800];
+          10'd581: vikram = ekam[5819:5810];
+          10'd582: vikram = ekam[5829:5820];
+          10'd583: vikram = ekam[5839:5830];
+          10'd584: vikram = ekam[5849:5840];
+          10'd585: vikram = ekam[5859:5850];
+          10'd586: vikram = ekam[5869:5860];
+          10'd587: vikram = ekam[5879:5870];
+          10'd588: vikram = ekam[5889:5880];
+          10'd589: vikram = ekam[5899:5890];
+          10'd590: vikram = ekam[5909:5900];
+          10'd591: vikram = ekam[5919:5910];
+          10'd592: vikram = ekam[5929:5920];
+          10'd593: vikram = ekam[5939:5930];
+          10'd594: vikram = ekam[5949:5940];
+          10'd595: vikram = ekam[5959:5950];
+          10'd596: vikram = ekam[5969:5960];
+          10'd597: vikram = ekam[5979:5970];
+          10'd598: vikram = ekam[5989:5980];
+          10'd599: vikram = ekam[5999:5990];
+          10'd600: vikram = ekam[6009:6000];
+          10'd601: vikram = ekam[6019:6010];
+          10'd602: vikram = ekam[6029:6020];
+          10'd603: vikram = ekam[6039:6030];
+          10'd604: vikram = ekam[6049:6040];
+          10'd605: vikram = ekam[6059:6050];
+          10'd606: vikram = ekam[6069:6060];
+          10'd607: vikram = ekam[6079:6070];
+          10'd608: vikram = ekam[6089:6080];
+          10'd609: vikram = ekam[6099:6090];
+          10'd610: vikram = ekam[6109:6100];
+          10'd611: vikram = ekam[6119:6110];
+          10'd612: vikram = ekam[6129:6120];
+          10'd613: vikram = ekam[6139:6130];
+          10'd614: vikram = ekam[6149:6140];
+          10'd615: vikram = ekam[6159:6150];
+          10'd616: vikram = ekam[6169:6160];
+          10'd617: vikram = ekam[6179:6170];
+          10'd618: vikram = ekam[6189:6180];
+          10'd619: vikram = ekam[6199:6190];
+          10'd620: vikram = ekam[6209:6200];
+          10'd621: vikram = ekam[6219:6210];
+          10'd622: vikram = ekam[6229:6220];
+          10'd623: vikram = ekam[6239:6230];
+          10'd624: vikram = ekam[6249:6240];
+          10'd625: vikram = ekam[6259:6250];
+          10'd626: vikram = ekam[6269:6260];
+          10'd627: vikram = ekam[6279:6270];
+          10'd628: vikram = ekam[6289:6280];
+          10'd629: vikram = ekam[6299:6290];
+          10'd630: vikram = ekam[6309:6300];
+          10'd631: vikram = ekam[6319:6310];
+          10'd632: vikram = ekam[6329:6320];
+          10'd633: vikram = ekam[6339:6330];
+          10'd634: vikram = ekam[6349:6340];
+          10'd635: vikram = ekam[6359:6350];
+          10'd636: vikram = ekam[6369:6360];
+          10'd637: vikram = ekam[6379:6370];
+          10'd638: vikram = ekam[6389:6380];
+          10'd639: vikram = ekam[6399:6390];
+          10'd640: vikram = ekam[6409:6400];
+          10'd641: vikram = ekam[6419:6410];
+          10'd642: vikram = ekam[6429:6420];
+          10'd643: vikram = ekam[6439:6430];
+          10'd644: vikram = ekam[6449:6440];
+          10'd645: vikram = ekam[6459:6450];
+          10'd646: vikram = ekam[6469:6460];
+          10'd647: vikram = ekam[6479:6470];
+          10'd648: vikram = ekam[6489:6480];
+          10'd649: vikram = ekam[6499:6490];
+          10'd650: vikram = ekam[6509:6500];
+          10'd651: vikram = ekam[6519:6510];
+          10'd652: vikram = ekam[6529:6520];
+          10'd653: vikram = ekam[6539:6530];
+          10'd654: vikram = ekam[6549:6540];
+          10'd655: vikram = ekam[6559:6550];
+          10'd656: vikram = ekam[6569:6560];
+          10'd657: vikram = ekam[6579:6570];
+          10'd658: vikram = ekam[6589:6580];
+          10'd659: vikram = ekam[6599:6590];
+          10'd660: vikram = ekam[6609:6600];
+          10'd661: vikram = ekam[6619:6610];
+          10'd662: vikram = ekam[6629:6620];
+          10'd663: vikram = ekam[6639:6630];
+          10'd664: vikram = ekam[6649:6640];
+          10'd665: vikram = ekam[6659:6650];
+          10'd666: vikram = ekam[6669:6660];
+          10'd667: vikram = ekam[6679:6670];
+          10'd668: vikram = ekam[6689:6680];
+          10'd669: vikram = ekam[6699:6690];
+          10'd670: vikram = ekam[6709:6700];
+          10'd671: vikram = ekam[6719:6710];
+          10'd672: vikram = ekam[6729:6720];
+          10'd673: vikram = ekam[6739:6730];
+          10'd674: vikram = ekam[6749:6740];
+          10'd675: vikram = ekam[6759:6750];
+          10'd676: vikram = ekam[6769:6760];
+          10'd677: vikram = ekam[6779:6770];
+          10'd678: vikram = ekam[6789:6780];
+          10'd679: vikram = ekam[6799:6790];
+          10'd680: vikram = ekam[6809:6800];
+          10'd681: vikram = ekam[6819:6810];
+          10'd682: vikram = ekam[6829:6820];
+          10'd683: vikram = ekam[6839:6830];
+          10'd684: vikram = ekam[6849:6840];
+          10'd685: vikram = ekam[6859:6850];
+          10'd686: vikram = ekam[6869:6860];
+          10'd687: vikram = ekam[6879:6870];
+          10'd688: vikram = ekam[6889:6880];
+          10'd689: vikram = ekam[6899:6890];
+          10'd690: vikram = ekam[6909:6900];
+          10'd691: vikram = ekam[6919:6910];
+          10'd692: vikram = ekam[6929:6920];
+          10'd693: vikram = ekam[6939:6930];
+          10'd694: vikram = ekam[6949:6940];
+          10'd695: vikram = ekam[6959:6950];
+          10'd696: vikram = ekam[6969:6960];
+          10'd697: vikram = ekam[6979:6970];
+          10'd698: vikram = ekam[6989:6980];
+          10'd699: vikram = ekam[6999:6990];
+          10'd700: vikram = ekam[7009:7000];
+          10'd701: vikram = ekam[7019:7010];
+          10'd702: vikram = ekam[7029:7020];
+          10'd703: vikram = ekam[7039:7030];
+          10'd704: vikram = ekam[7049:7040];
+          10'd705: vikram = ekam[7059:7050];
+          10'd706: vikram = ekam[7069:7060];
+          10'd707: vikram = ekam[7079:7070];
+          10'd708: vikram = ekam[7089:7080];
+          10'd709: vikram = ekam[7099:7090];
+          10'd710: vikram = ekam[7109:7100];
+          10'd711: vikram = ekam[7119:7110];
+          10'd712: vikram = ekam[7129:7120];
+          10'd713: vikram = ekam[7139:7130];
+          10'd714: vikram = ekam[7149:7140];
+          10'd715: vikram = ekam[7159:7150];
+          10'd716: vikram = ekam[7169:7160];
+          10'd717: vikram = ekam[7179:7170];
+          10'd718: vikram = ekam[7189:7180];
+          10'd719: vikram = ekam[7199:7190];
+          10'd720: vikram = ekam[7209:7200];
+          10'd721: vikram = ekam[7219:7210];
+          10'd722: vikram = ekam[7229:7220];
+          10'd723: vikram = ekam[7239:7230];
+          10'd724: vikram = ekam[7249:7240];
+          10'd725: vikram = ekam[7259:7250];
+          10'd726: vikram = ekam[7269:7260];
+          10'd727: vikram = ek",
+,,
+m[7279:7270];,,
+          10'd728: vikram = ekam[7289:7280];,,
+          10'd729: vikram = ekam[7299:7290];,,
+          10'd730: vikram = ekam[7309:7300];,,
+          10'd731: vikram = ekam[7319:7310];,,
+          10'd732: vikram = ekam[7329:7320];,,
+          10'd733: vikram = ekam[7339:7330];,,
+          10'd734: vikram = ekam[7349:7340];,,
+          10'd735: vikram = ekam[7359:7350];,,
+          10'd736: vikram = ekam[7369:7360];,,
+          10'd737: vikram = ekam[7379:7370];,,
+          10'd738: vikram = ekam[7389:7380];,,
+          10'd739: vikram = ekam[7399:7390];,,
+          10'd740: vikram = ekam[7409:7400];,,
+          10'd741: vikram = ekam[7419:7410];,,
+          10'd742: vikram = ekam[7429:7420];,,
+          10'd743: vikram = ekam[7439:7430];,,
+          10'd744: vikram = ekam[7449:7440];,,
+          10'd745: vikram = ekam[7459:7450];,,
+          10'd746: vikram = ekam[7469:7460];,,
+          10'd747: vikram = ekam[7479:7470];,,
+          10'd748: vikram = ekam[7489:7480];,,
+          10'd749: vikram = ekam[7499:7490];,,
+          10'd750: vikram = ekam[7509:7500];,,
+          10'd751: vikram = ekam[7519:7510];,,
+          10'd752: vikram = ekam[7529:7520];,,
+          10'd753: vikram = ekam[7539:7530];,,
+          10'd754: vikram = ekam[7549:7540];,,
+          10'd755: vikram = ekam[7559:7550];,,
+          10'd756: vikram = ekam[7569:7560];,,
+          10'd757: vikram = ekam[7579:7570];,,
+          10'd758: vikram = ekam[7589:7580];,,
+          10'd759: vikram = ekam[7599:7590];,,
+          10'd760: vikram = ekam[7609:7600];,,
+          10'd761: vikram = ekam[7619:7610];,,
+          10'd762: vikram = ekam[7629:7620];,,
+          10'd763: vikram = ekam[7639:7630];,,
+          10'd764: vikram = ekam[7649:7640];,,
+          10'd765: vikram = ekam[7659:7650];,,
+          10'd766: vikram = ekam[7669:7660];,,
+          10'd767: vikram = ekam[7679:7670];,,
+          10'd768: vikram = ekam[7689:7680];,,
+          10'd769: vikram = ekam[7699:7690];,,
+          10'd770: vikram = ekam[7709:7700];,,
+          10'd771: vikram = ekam[7719:7710];,,
+          10'd772: vikram = ekam[7729:7720];,,
+          10'd773: vikram = ekam[7739:7730];,,
+          10'd774: vikram = ekam[7749:7740];,,
+          10'd775: vikram = ekam[7759:7750];,,
+          10'd776: vikram = ekam[7769:7760];,,
+          10'd777: vikram = ekam[7779:7770];,,
+          10'd778: vikram = ekam[7789:7780];,,
+          10'd779: vikram = ekam[7799:7790];,,
+          10'd780: vikram = ekam[7809:7800];,,
+          10'd781: vikram = ekam[7819:7810];,,
+          10'd782: vikram = ekam[7829:7820];,,
+          10'd783: vikram = ekam[7839:7830];,,
+          10'd784: vikram = ekam[7849:7840];,,
+          10'd785: vikram = ekam[7859:7850];,,
+          10'd786: vikram = ekam[7869:7860];,,
+          10'd787: vikram = ekam[7879:7870];,,
+          10'd788: vikram = ekam[7889:7880];,,
+          10'd789: vikram = ekam[7899:7890];,,
+          10'd790: vikram = ekam[7909:7900];,,
+          10'd791: vikram = ekam[7919:7910];,,
+          10'd792: vikram = ekam[7929:7920];,,
+          10'd793: vikram = ekam[7939:7930];,,
+          10'd794: vikram = ekam[7949:7940];,,
+          10'd795: vikram = ekam[7959:7950];,,
+          10'd796: vikram = ekam[7969:7960];,,
+          10'd797: vikram = ekam[7979:7970];,,
+          10'd798: vikram = ekam[7989:7980];,,
+          10'd799: vikram = ekam[7999:7990];,,
+          10'd800: vikram = ekam[8009:8000];,,
+          10'd801: vikram = ekam[8019:8010];,,
+          10'd802: vikram = ekam[8029:8020];,,
+          10'd803: vikram = ekam[8039:8030];,,
+          10'd804: vikram = ekam[8049:8040];,,
+          10'd805: vikram = ekam[8059:8050];,,
+          10'd806: vikram = ekam[8069:8060];,,
+          10'd807: vikram = ekam[8079:8070];,,
+          10'd808: vikram = ekam[8089:8080];,,
+          10'd809: vikram = ekam[8099:8090];,,
+          10'd810: vikram = ekam[8109:8100];,,
+          10'd811: vikram = ekam[8119:8110];,,
+          10'd812: vikram = ekam[8129:8120];,,
+          10'd813: vikram = ekam[8139:8130];,,
+          10'd814: vikram = ekam[8149:8140];,,
+          10'd815: vikram = ekam[8159:8150];,,
+          10'd816: vikram = ekam[8169:8160];,,
+          10'd817: vikram = ekam[8179:8170];,,
+          10'd818: vikram = ekam[8189:8180];,,
+          10'd819: vikram = ekam[8199:8190];,,
+          10'd820: vikram = ekam[8209:8200];,,
+          10'd821: vikram = ekam[8219:8210];,,
+          10'd822: vikram = ekam[8229:8220];,,
+          10'd823: vikram = ekam[8239:8230];,,
+          10'd824: vikram = ekam[8249:8240];,,
+          10'd825: vikram = ekam[8259:8250];,,
+          10'd826: vikram = ekam[8269:8260];,,
+          10'd827: vikram = ekam[8279:8270];,,
+          10'd828: vikram = ekam[8289:8280];,,
+          10'd829: vikram = ekam[8299:8290];,,
+          10'd830: vikram = ekam[8309:8300];,,
+          10'd831: vikram = ekam[8319:8310];,,
+          10'd832: vikram = ekam[8329:8320];,,
+          10'd833: vikram = ekam[8339:8330];,,
+          10'd834: vikram = ekam[8349:8340];,,
+          10'd835: vikram = ekam[8359:8350];,,
+          10'd836: vikram = ekam[8369:8360];,,
+          10'd837: vikram = ekam[8379:8370];,,
+          10'd838: vikram = ekam[8389:8380];,,
+          10'd839: vikram = ekam[8399:8390];,,
+          10'd840: vikram = ekam[8409:8400];,,
+          10'd841: vikram = ekam[8419:8410];,,
+          10'd842: vikram = ekam[8429:8420];,,
+          10'd843: vikram = ekam[8439:8430];,,
+          10'd844: vikram = ekam[8449:8440];,,
+          10'd845: vikram = ekam[8459:8450];,,
+          10'd846: vikram = ekam[8469:8460];,,
+          10'd847: vikram = ekam[8479:8470];,,
+          10'd848: vikram = ekam[8489:8480];,,
+          10'd849: vikram = ekam[8499:8490];,,
+          10'd850: vikram = ekam[8509:8500];,,
+          10'd851: vikram = ekam[8519:8510];,,
+          10'd852: vikram = ekam[8529:8520];,,
+          10'd853: vikram = ekam[8539:8530];,,
+          10'd854: vikram = ekam[8549:8540];,,
+          10'd855: vikram = ekam[8559:8550];,,
+          10'd856: vikram = ekam[8569:8560];,,
+          10'd857: vikram = ekam[8579:8570];,,
+          10'd858: vikram = ekam[8589:8580];,,
+          10'd859: vikram = ekam[8599:8590];,,
+          10'd860: vikram = ekam[8609:8600];,,
+          10'd861: vikram = ekam[8619:8610];,,
+          10'd862: vikram = ekam[8629:8620];,,
+          10'd863: vikram = ekam[8639:8630];,,
+          10'd864: vikram = ekam[8649:8640];,,
+          10'd865: vikram = ekam[8659:8650];,,
+          10'd866: vikram = ekam[8669:8660];,,
+          10'd867: vikram = ekam[8679:8670];,,
+          10'd868: vikram = ekam[8689:8680];,,
+          10'd869: vikram = ekam[8699:8690];,,
+          10'd870: vikram = ekam[8709:8700];,,
+          10'd871: vikram = ekam[8719:8710];,,
+          10'd872: vikram = ekam[8729:8720];,,
+          10'd873: vikram = ekam[8739:8730];,,
+          10'd874: vikram = ekam[8749:8740];,,
+          10'd875: vikram = ekam[8759:8750];,,
+          default: vikram = 'b0;,,
+        endcase,,
+      endmodule,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
