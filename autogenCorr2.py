@@ -8,7 +8,6 @@ import requests
 from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
-import gradio as gr
 import re
 
 # Login with access key
@@ -24,14 +23,15 @@ memory = ConversationSummaryMemory(llm=llm)
 # Define prompt templates for different use cases
 prompts = {
     "verilog_counter": PromptTemplate(
-          input_variables=["user_input"],
-          template="""
+        input_variables=["user_input"],
+        template="""
           You are a Verilog Programmer. Retrieve required data correctly from <user_input>.
           First classify counter type: normal counter, ring counter, down counter and counter with enable.
           Read given <user_input> data care fully. Check if <input_name>, <output_name> or <module_name> is given.
           If <module_name> is not given, generate a name using <counter> and <bit_size>.
-          Choose correctly type from the following:
+          Always Respond with the names provided by user.
           Read numbers carefully. Do not miss any number in the values.
+          Choose correctly type from the following:
           Type 1: normal: implement a 2-bit counter:
                                     module counter_2bit(
                                             input CLK,
@@ -54,9 +54,9 @@ prompts = {
                                         always @(posedge CLK or negedge reset)
                                         begin
                                             if (!reset)
-                                                bit_cnt <= 4’b00;
-                                            else if (enable)
-                                                    bit_cnt <= bit_cnt + 1;
+                                                bit_cnt <= 4'b0000;
+                                            else
+                                                bit_cnt <= bit_cnt + 1;
                                         end
                                         endmodule
 
@@ -71,7 +71,7 @@ prompts = {
                                         always @(posedge CLK or negedge reset)
                                         begin
                                             if (!reset)
-                                                count <= 8'b0001;
+                                                count <= 8'b0000;
                                             else
                                                 count <= [count[6:0], count[7]];
                                         end
@@ -90,11 +90,89 @@ prompts = {
                                         always @(posedge CLK or negedge reset)
                                         begin
                                             if (!reset)
-                                                count <= 3’b0;
+                                                count <= 3'b0;
                                             else
                                                 count <= count - 1;
                                         end
                                         endmodule
+
+            - Following are some example:
+
+              ###Instruction: 4 bit up-down counter with enable up_dn_en
+              ###Respons: module up_down_counter_4bit(
+                            input CLK,
+                            input reset,
+                            input enable,
+                            output reg [3:0] count
+                          );
+
+                          always @(posedge CLK or negedge reset)
+                          begin
+                            if (!reset)
+                            count <= 4'b0000;
+                            else if (up_dn_en)
+                            count <= count + 1;
+                            else
+                            count <= count - 1;
+                          end
+
+                          endmodule
+
+              ###Instruction: write 4-bit ring counter
+              ###Respons: module ring_counter_4bit(
+                            input CLK,
+                            input reset,
+                            output reg [3:0] count
+                          );
+
+                          always @(posedge CLK or negedge reset)
+                          begin
+                            if (!reset)
+                            count <= 4'b0000;
+                            else
+                            count <= [count[2:0], count[3]];
+                          end
+
+                          endmodule
+
+              ###Instruction: write 8-bit ring counter with output ringc and async reset rstn
+              ###Respons: module ring_counter_8bit(
+                            input CLK,
+                            input reset,
+                            output reg [7:0] ringc
+                          );
+
+                          always @(posedge CLK or negedge rstn)
+                          begin
+                            if (!rstn)
+                            ringc <= 8'b00000000;
+                            else
+                            ringc <= [ringc[6:0], ringc[7]];
+                          end
+
+                          endmodule
+
+
+              ###Instruction: write 8-bit ring counter with output beta and sync reset alpha
+              ###Responsez: module ring_counter_8bit(
+                            input CLK,
+                            input reset,
+                            output reg [7:0] beta
+                          );
+
+                          always @(posedge CLK)
+                          begin
+                            if (!alpha)
+                            beta <= 8'b00000000;
+                            else
+                            beta <= [beta[6:0], beta[7]];
+                          end
+
+                          endmodule
+
+              ###Instruction: write 4 to 1 mux with output data_o and input data_i[3:$]
+              ###Response:
+
 
           - User: {user_input}
           - Note: 1. Always take care of input name, output name, and module names.
@@ -107,19 +185,18 @@ prompts = {
           """
     ),
     "flip_flop": PromptTemplate(
-          input_variables=["user_input"],
-          template="""
+        input_variables=["user_input"],
+        template="""
           You are a Verilog Programmer. Retrieve required data correctly from <user_input>.
           - Always read given <user_input> data care fully. Check and identify if <input_name>, <output_name>, <reset_name>, <enable_name>, <clock_name> or <module_name> is/are given.
           - If <module_name> is not given, generate a name using <flip_type> and <bit_size>.
-          - Always classify all the names mentioned in the user_input. 
+          - Always classify all the names mentioned in the user_input. Names are always initiated after their corresponding pin type.
           - Always look for potential names. Names can be anythin from words, names, number to mixture of both.
-          - For names, choose names using following rules:
+          - For names, always choose names using following rules:
+              - Golden Rule: pin names are always initiated in the <user_input> followed by their corresponding pin type.
               - If <input_name> is given and <output_name> is not given, simply add "_ff" as suffix to <input_name> to create <output_name>. Do not change the given <input_name>. For example if input name is "data" the output name should be "data_ff".
               - If <output_name> is given and <input_name> is not given, remove any prefix or suffix like "out", "ff", "output", "outter", "open", "outwards" from <output_name> to create <input_name>. For example if <output_name> is "data_ff" the <input_name> should be "data".
               - If both <input_name> and <output_name> is given, use them as it is. Do not add "_ff" in this case.
-              - IF <reset_name>, <enable_name> and/or <clock_name> names are given, respond with provided names.
-          - Always repond with choosen names from upper step.
           - Choose correct type from the following:
             Type 1: D flip-flop:
                                 module d_flip_flop(
@@ -173,12 +250,81 @@ prompts = {
                                 always @(posedge CLK or negedge reset)
                                 begin    if (!resetn)
                                         Q<= 1'b0;
-                                  else if (enable)
+                                  else
                                         Q <= D;
                                 end
                                 endmodule
 
+        - Following are some example:
+            ###Instruction: implement 4-bit flop with output datao and input data_in and async reset rst and enable alpha
+            ###Respons: module reg_4bit_async_flop(
+                              input [3:0] data_in,
+                              input CLK,
+                              input rst,
+                              input alpha,
+                              output reg [3:0] datao
+                          );
+                          always @(posedge CLK or negedge rst)
+                          begin
+                              if (!rst)
+                                  datao <= 4'b0000;
+                              else
+                                  datao <= data_in;
+                          end
+                          endmodule
+
+            ###Instruction: implement 12-bit flop with output vikram and input mehta and async reset rrr and enable poke
+            ###Respons: module reg_12bit_async_flop(
+                              input [11:0] mehta,
+                              input CLK,
+                              input rrr,
+                              input poke,
+                              output reg [11:0] vikram
+                          );
+                          always @(posedge CLK or negedge rrr)
+                          begin
+                              if (!rrr)
+                                  vikram <= 12'b000000000000;
+                              else
+                                  vikram <= mehta;
+                          end
+                          endmodule
+
+            ###Instruction: write 8-bit flop with synchronous reset, with input mamba and output apple
+            ###Respons: module reg_8bit_sync_flop(
+                                input [7:0] mamba,
+                                input CLK,
+                                input reset,
+                                output reg [7:0] apple
+                            );
+                            always @(posedge CLK)
+                            begin
+                                if (reset)
+                                    apple <= 8'b00000000;
+                                else
+                                    apple <= mamba;
+                            end
+                            endmodule
+
+
+            ###Instruction: write a 4-bit flop with enable rwi, input name cell, output as gemini and reset as high
+            ###Respons: module reg_4bit_enable(
+                              input [3:0] cell,
+                              input CLK,
+                              input rwi,
+                              input high,
+                              output reg [3:0] gemini
+                          );
+                          always @(posedge CLK or negedge reset)
+                          begin    if (!high)
+                                  gemini<= 1'b0;
+                            else
+                                  gemini <= cell;
+                          end
+                          endmodule"
+
         - User: {user_input}
+        - Analyse all steps and example before choose names and generating specific type of flip-flop.
         - Note: 1. Always take care of input name, output name, clock name, reset name, enable name and module names. Make sure if mentioned in user_input, should be correct.
                 2. Use same style and syntax as the examples. Calculations should be mathematically correct. Recheck mathematical calculations twice.
                 3. Verilog code should be in same sytax and style as above examples.
@@ -337,8 +483,10 @@ prompts = {
                   - pin_0_range=[<input_width>:0]
                   - addition_factor = (<input_width>+1)
                 - Now keep adding <addition_factor> to the previous range values on both side in the bracket.
-                - Example: Suppose, pin_<n-1>_range=[x:y]
-                                    pin_<n>_range=[(x+<addition_factor>):(y+<addition_factor>)]   # <n> is pin number
+                - Suppose, pin_<n-1>_range=[x:y]
+                  The next pin will always be: 
+                        pin_<n>_range=[(x+<addition_factor>):(y+<addition_factor>)]   # <n> is pin number
+                - Add <addition_factor> correctly and take care of mathematical summation for each pin.
                   Note:
                         - Always perform complete calculation process for this step from pin_0_range to pin_<last_pin>_range.
                         - Solve manually using mathematical rules, do not use any coding language.
@@ -371,6 +519,8 @@ prompts = {
                     2. If input is 3-to-1 mux, select_pin=log2(3)=2
                     3. If input is 8-to-1 mux, select_pin=log2(8)=3
                 - Note: Put the calculated <select_pin> value in select pin declaration and with each pin.
+            5. Calculate ouput pin range:
+                - output_range = pin_0_range
 
         - Samples codes:
               ###Instruction: create/implement/write 8-to-1 mux with output <output_name> and input <input_name>[8:$]
@@ -389,12 +539,15 @@ prompts = {
                     pin_5_range=<pin_4_range>+[<addition_factor>]=[(49+<addition_factor>):(40+<addition_factor>)]=[(44+9):(36+9)]=[53:45]
                     pin_6_range=<pin_5_range>+[<addition_factor>]=[(59+<addition_factor>):(50+<addition_factor>)]=[(53+9):(45+9)]=[62:54]
                     pin_7_range=<pin_6_range>+[<addition_factor>]=[(69+<addition_factor>):(60+<addition_factor>)]=[(62+9):(54+9)]=[71:63]
+
+                    output_range = pin_0_range
+
                     select_pin=log2(8)=3
               ###Response:
                     module mux_8to1(
                     input [<bit_size>:0] <input_name>,
                     input [<select_pin>-1:0] select,
-                    output reg <output_name>
+                    output reg [<output_range>] <output_name>
                   );
                   always @(*)
                     case(select)
@@ -436,12 +589,14 @@ prompts = {
                   pin_14_range=<pin_13_range>+[<addition_factor>]=[83+<addition_factor>:(78+<addition_factor>)]=[(83+6):(78+6)]=[89:84]
                   pin_15_range=<pin_14_range>+[<addition_factor>]=[89+<addition_factor>:(84+<addition_factor>)]=[(89+6):(84+6)]=[95:90]
 
+                  output_range = pin_0_range
+
                   select_pin=log2(16)=4
             ###Response:
                   module mux_16to1(
                       input [95:0] v_in,
                       input [3:0] select,
-                      output reg output
+                      output reg [<output_range>] output
                     );
                     always @(*)
                       case(select)
@@ -465,7 +620,7 @@ prompts = {
                       endcase
                     endmodule
 
-            ###Instruction: You: create 7 to 1 mux with output mux_out and input data_in[7:$]
+            ###Instruction: create 7 to 1 mux with output mux_out and input data_in[7:$]
             ###Calculation:
                   1. Calculate total number of pins:
                     - Total number of pins = 7
@@ -494,7 +649,7 @@ prompts = {
                   module mux_7to1(
                       input [55:0] data_in,
                       input [2:0] select,
-                      output reg mux_out
+                      output reg [<output_range>] mux_out
                   );
 
                   always @(*)
@@ -517,6 +672,7 @@ prompts = {
         - Always respond with calculated value and do not use keywords.
         - Always respond with the same syntax as examples.
         - Do not count the Default Pin in Total Number of Pins.
+        - Always recheck all the calculations you perform. Fix them if not correct.
         - Accuracy and precision are our priority.
         - Provide response with verilog code.
         """
@@ -598,15 +754,3 @@ while True:
     output = extract_last_verilog_code(response)
     print(f"response: {response}")
     print(f"output: {output}")
-
-# create 44 to 1 mux with output mux_out and input data_in[32:$]
-# create 29 to 1 mux with output mux_out and input data_in[29:$]
-# create 53 to 1 mux with output mux_out and input data_in[29:$]
-# create 2 to 1 mux with output mux_out and input data_in[3:$]
-# create 7 to 1 mux with output mux_out and input data_in[7:$]
-# implement 4-bit flop with output name vikram and input name data_1
-# implement 4-bit flop with output name data_ff
-# Write a 8-bit ring counter with output ring_cnt
-# implement 4-bit flop with output datao and input datai
-# implement 4-bit flop with output datao and input data_in and async reset rst and enable en
-# implement 4-bit flop with output datao and input data_in and async reset rst and enable alpha
